@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="GPT 代充最新公告与 QQ 客服联系方式。" />
+    <meta name="theme-color" content="#101827" />
+    <title>GPT 代充 | 最新公告</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="site-header" aria-label="网站标题">
+        <a class="brand" href="./" aria-label="GPT 代充公告首页">
+          <span class="brand-mark" aria-hidden="true">G</span>
+          <span>
+            <strong>GPT 代充</strong>
+            <small>最新服务公告</small>
+          </span>
+        </a>
+        <span class="status"><span class="status-dot" aria-hidden="true"></span>公告已更新</span>
+      </header>
+
+      <section class="announcement" aria-labelledby="announcement-title">
+        <div class="announcement-icon" aria-hidden="true">↗</div>
+        <p class="eyebrow">SERVICE UPDATE · 2026</p>
+        <h1 id="announcement-title">最新的 GPT 代充<br /><span>请联系 QQ 客服获取</span></h1>
+        <p class="lead">如需了解当前可用的代充服务、价格与售后安排，请直接联系 QQ 客服，我们会为你提供最新信息。</p>
+
+        <div class="contact-panel">
+          <div>
+            <span class="contact-label">QQ 客服</span>
+            <strong class="contact-number">1002569303</strong>
+          </div>
+          <button class="copy-button" type="button" data-copy="1002569303">
+            <span aria-hidden="true">⧉</span> 复制 QQ
+          </button>
+        </div>
+        <p class="copy-feedback" role="status" aria-live="polite"></p>
+        <p class="notice">请以客服确认的最新服务说明为准，谨防冒用账号。</p>
+      </section>
+
+      <footer class="site-footer">
+        <span>chongzhi.chatgpt-plus.top</span>
+        <span>© 2026 GPT 代充</span>
+      </footer>
+    </main>
+    <script>
+      const copyButton = document.querySelector('[data-copy]');
+      const feedback = document.querySelector('.copy-feedback');
+
+      copyButton.addEventListener('click', async () => {
+        const value = copyButton.dataset.copy;
+        try {
+          await navigator.clipboard.writeText(value);
+          feedback.textContent = 'QQ 号已复制';
+        } catch {
+          feedback.textContent = `请手动复制：${value}`;
+        }
+      });
+    </script>
+  </body>
+</html>
