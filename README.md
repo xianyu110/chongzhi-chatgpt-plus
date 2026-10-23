@@ -19,3 +19,12 @@ python3 -m http.server 8080
 - Pages 来源：`main` 分支根目录
 - 自定义域名：<https://chongzhi.chatgpt-plus.top/>
 - 客服 QQ：`1002569303`
+
+## 页面
+
+- `index.html`：ChatGPT Plus / GPT Pro
+- `gemini.html`：Gemini
+- `grok.html`：SuperGrok
+- `claude.html`：Claude Mail / Pro / Max（站内页，购买入口 `https://wzyp.cn/item/ahu0j7`）
+- `faq.html`：常见问题
+

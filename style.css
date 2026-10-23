@@ -1141,6 +1141,12 @@ body {
     grid-template-columns: 1fr;
 }
 
+.pricing-grid.quad {
+    max-width: 1040px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
 .pricing-card {
     background: #fff;
     border-radius: 20px;
@@ -1517,6 +1523,10 @@ body {
     .pricing-grid.single {
         max-width: 100%;
     }
+    .pricing-grid.quad {
+        grid-template-columns: 1fr;
+    }
+
 
     .step-card {
         gap: 16px;
