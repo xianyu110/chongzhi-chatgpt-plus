@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setupFAQ();
         setupMobileMenu();
         setupTestimonialsScroll();
+        setupFloatingCS();
     }
 
     function setupEventListeners() {
@@ -126,6 +127,40 @@ document.addEventListener('DOMContentLoaded', function() {
             var x = e.pageX - track.offsetLeft;
             var walk = (x - startX) * 1.5;
             track.scrollLeft = scrollLeft - walk;
+        });
+    }
+
+
+    // Floating QQ customer service (site-wide)
+    function setupFloatingCS() {
+        if (document.getElementById('float-cs')) return;
+
+        var wrap = document.createElement('div');
+        wrap.className = 'float-cs';
+        wrap.id = 'float-cs';
+        wrap.innerHTML =
+            '<div class="float-cs-panel" id="float-cs-panel" role="dialog" aria-label="客服">' +
+            '<h3>需要帮助？</h3>' +
+            '<p>客服 QQ <strong>1002569303</strong>。也可打开站内客服中心查看速答。</p>' +
+            '<div class="float-cs-actions">' +
+            '<a class="primary" href="https://wpa.qq.com/msgrd?v=3&uin=1002569303&site=qq&menu=yes" target="_blank" rel="noopener noreferrer">转人工 QQ</a>' +
+            '<a class="secondary" href="support.html">客服中心</a>' +
+            '<a class="secondary" href="tencent://message/?uin=1002569303">打开 QQ 客户端</a>' +
+            '</div></div>' +
+            '<button type="button" class="float-cs-btn" id="float-cs-btn" aria-expanded="false" aria-controls="float-cs-panel">客服<br>QQ</button>';
+
+        document.body.appendChild(wrap);
+        var btn = document.getElementById('float-cs-btn');
+        var panel = document.getElementById('float-cs-panel');
+        btn.addEventListener('click', function () {
+            var open = panel.classList.toggle('open');
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        document.addEventListener('click', function (e) {
+            if (!wrap.contains(e.target)) {
+                panel.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
         });
     }
 
