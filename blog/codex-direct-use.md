@@ -55,6 +55,8 @@
 
 优先官方渠道，安装细节与商店链接见：[Windows Codex / ChatGPT 客户端下载教程](https://chongzhi.chatgpt-plus.top/download-codex.html)。
 
+备用：**网盘下载**（夸克，Windows 本地包，提取码 `rTQw`）：https://pan.quark.cn/s/0f1763fe2ac9?pwd=rTQw
+
 ### Windows（推荐微软商店 .msix）
 
 1. 打开系统自带 **Microsoft Store**。  
