@@ -6,7 +6,7 @@
         },
         codex: {
             q: 'Codex 怎么下载？',
-            a: 'Windows 优先用 Microsoft Store 搜索 ChatGPT（OpenAI）。本站「Codex下载」页有商店链接与安全提示；完整中文配置见 doc.momoai.asia 的 Codex国内站教程。请勿使用篡改 API 的第三方安装器。'
+            a: 'Windows 优先用 Microsoft Store 搜索 ChatGPT（OpenAI）。本站「Codex下载」页有商店链接；买号后官方登录看 blog/codex-direct.html 直连教程。若走 API/中转再看 doc.momoai 中转站教程。请勿使用篡改 API 的第三方安装器。'
         },
         reset: {
             q: '额度什么时候重置？',
