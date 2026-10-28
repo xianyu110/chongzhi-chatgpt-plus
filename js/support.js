@@ -22,7 +22,7 @@
         },
         human: {
             q: '转人工 QQ',
-            a: '请添加或点击打开客服 QQ：1002569303。留言时附上订单号与问题截图会更快。下方按钮可直接发起会话。'
+            a: '请添加或点击右侧打开客服 QQ：1002569303。留言时附上订单号与问题截图会更快。'
         }
     };
 
@@ -43,9 +43,15 @@
             var key = btn.getAttribute('data-q');
             var item = replies[key];
             if (!item) return;
+            buttons.forEach(function (b) { b.classList.remove('is-active'); });
+            btn.classList.add('is-active');
             addBubble(item.q, 'user');
             setTimeout(function () {
                 addBubble(item.a, 'bot');
+                if (key === 'human') {
+                    var contact = document.getElementById('cs-contact');
+                    if (contact) contact.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
             }, 180);
         });
     });

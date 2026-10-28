@@ -13,7 +13,7 @@
                 timeZone: 'Asia/Shanghai',
                 year: 'numeric', month: '2-digit', day: '2-digit',
                 hour: '2-digit', minute: '2-digit', hour12: false
-            }).format(d) + ' (Asia/Shanghai)';
+            }).format(d);
         } catch (e) {
             return d.toLocaleString('zh-CN');
         }
@@ -94,7 +94,7 @@
             pill.className = 'radar-pill ' + statusClass(data.status);
         }
         var updated = $('radar-updated');
-        if (updated) updated.textContent = '数据更新：' + formatDate(data.updatedAt);
+        if (updated) updated.textContent = formatDate(data.updatedAt);
         var last = $('radar-last-reset');
         if (last) last.textContent = formatDate(data.lastResetAt);
         var next = $('radar-next-estimate');
@@ -102,7 +102,7 @@
         var tz = $('radar-tz');
         if (tz) tz.textContent = data.timezone || 'Asia/Shanghai';
         var note = $('radar-note');
-        if (note) note.textContent = data.note || '';
+        if (note) note.textContent = data.statusLabel || data.note || '—';
         var btn = $('radar-source-btn');
         if (btn && data.sourceUrl) {
             btn.href = data.sourceUrl;
@@ -120,6 +120,8 @@
         }
         var hint = $('radar-next-hint');
         if (hint) hint.textContent = msg;
+        var note = $('radar-note');
+        if (note) note.textContent = msg;
         var history = $('radar-history');
         if (history) {
             history.innerHTML = '';

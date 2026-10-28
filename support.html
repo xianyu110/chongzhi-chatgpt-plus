@@ -24,7 +24,7 @@
                 <a href="faq.html" class="nav-tab">常见问题</a>
                 <a href="support.html" class="nav-tab active">客服</a>
             </div>
-            <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer" class="navbar-cta">转人工 QQ</a>
+            <a href="#cs-contact" class="navbar-cta">转人工</a>
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="菜单">
                 <span></span><span></span><span></span>
             </button>
@@ -32,14 +32,10 @@
     </nav>
 
     <div class="container">
-        <section class="hero hero-sm">
+        <section class="support-hero">
             <div class="hero-badge">QQ 人工客服 · 站内速答</div>
             <h1 class="hero-title">客服中心</h1>
-            <p class="hero-desc">先看下方速答面板或 FAQ；解决不了再一键转人工 QQ <strong>1002569303</strong>。我们使用 QQ，而不是 Telegram 机器人。</p>
-            <div class="hero-actions">
-                <a class="btn-primary" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">转人工 QQ</a>
-                <a class="btn-secondary" href="#cs-panel">打开速答面板</a>
-            </div>
+            <p class="support-hero-sub">点左侧常见问题可快速查看说明；解决不了再转人工 QQ <strong>1002569303</strong>。</p>
         </section>
 
         <section class="cs-layout" id="cs-panel">
@@ -49,10 +45,10 @@
                         <strong>站内速答</strong>
                         <span class="cs-chat-sub">预设回复 · 非大模型实时对话</span>
                     </div>
-                    <a class="cs-qq-chip" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">转人工 QQ</a>
+                    <span class="cs-online-badge">在线</span>
                 </div>
                 <div class="cs-chat-log" id="cs-chat-log" aria-live="polite">
-                    <div class="cs-bubble bot">你好，我是 GPTPro代充 站内助手。点下面常见问题可快速查看说明；需要人工时请点「转人工 QQ」。</div>
+                    <div class="cs-bubble bot">你好，我是 GPTPro代充 站内助手。点下面常见问题可快速查看说明；需要人工时请右侧「转人工 QQ」。</div>
                 </div>
                 <div class="cs-quick-replies" id="cs-quick-replies">
                     <button type="button" data-q="recharge">如何充值 Plus / Pro？</button>
@@ -62,25 +58,22 @@
                     <button type="button" data-q="pay">支持哪些支付方式？</button>
                     <button type="button" data-q="human">转人工 QQ</button>
                 </div>
-                <div class="cs-chat-footer">
-                    <a class="btn-primary btn-block" href="tencent://message/?uin=1002569303">用 QQ 客户端打开 1002569303</a>
-                    <a class="btn-secondary btn-block" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">网页发起 QQ 会话</a>
-                </div>
             </div>
 
-            <div class="cs-side">
-                <div class="card-panel">
-                    <h2>人工客服</h2>
-                    <p>客服 QQ：<strong class="text-accent">1002569303</strong></p>
-                    <p>建议留言时附上：订单号 / 账号邮箱（可打码）/ 问题截图，方便更快处理。</p>
-                    <ul class="plain-list">
+            <aside class="cs-side" id="cs-contact">
+                <div class="cs-contact-card">
+                    <p class="cs-contact-label">人工客服 QQ</p>
+                    <p class="cs-contact-qq">1002569303</p>
+                    <p class="cs-contact-hint">留言时附上订单号 / 账号邮箱（可打码）/ 问题截图，方便更快处理。</p>
+                    <a class="btn-primary btn-block" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">转人工 QQ</a>
+                    <a class="btn-secondary btn-block" href="tencent://message/?uin=1002569303">用 QQ 客户端打开</a>
+                    <ul class="cs-contact-topics">
                         <li>充值到账与卡密问题</li>
                         <li>Codex 客户端安装与登录</li>
                         <li>企业批量 / 对公咨询</li>
                     </ul>
-                    <a class="btn-primary btn-block" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">立即联系 QQ 客服</a>
                 </div>
-                <div class="card-panel">
+                <div class="cs-links-card card-panel">
                     <h2>快捷入口</h2>
                     <div class="links-grid compact">
                         <a class="link-card" href="radar.html">
@@ -105,12 +98,12 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </aside>
         </section>
 
         <section class="faq-section" id="support-faq">
             <div class="section-header">
-                <h2>常见问答（手风琴）</h2>
+                <h2>常见问答</h2>
                 <p>与速答面板同源说明，便于扫读。</p>
             </div>
             <div class="faq-list">

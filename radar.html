@@ -32,80 +32,67 @@
     </nav>
 
     <div class="container">
-        <section class="hero hero-sm">
+        <section class="radar-hero">
             <div class="hero-badge">手工观测 · 可编辑数据源</div>
-            <h1 class="hero-title"><span class="hero-title-accent">Codex / GPT</span> 额度重置雷达</h1>
-            <p class="hero-desc">面向付费用户整理的额度重置观测面板：最近重置时间、下次预估倒计时与历史时间线。数据保存在站内 <code>data/radar.json</code>，由站主更新——不伪装分钟级第三方实时接口。</p>
-            <div class="hero-actions">
-                <a href="#radar-board" class="btn-primary">查看雷达</a>
-                <a href="https://x.com/thsottiaux" target="_blank" rel="noopener noreferrer" class="btn-secondary">查看动态（X）</a>
-            </div>
+            <h1 class="hero-title"><span class="hero-title-accent">额度重置</span> 雷达</h1>
+            <p class="radar-hero-sub">Codex / GPT 配额重置观测面板：下次预估倒计时、最近重置与历史时间线。</p>
         </section>
 
-        <section class="radar-board" id="radar-board">
-            <div class="radar-status-card" id="radar-status-card">
-                <div class="radar-status-top">
+        <section class="radar-dash" id="radar-board">
+            <div class="radar-countdown-card">
+                <div class="radar-countdown-top">
                     <span class="radar-pill" id="radar-status-pill">加载中</span>
-                    <span class="radar-updated" id="radar-updated">—</span>
+                    <span class="radar-live-dot" aria-hidden="true"></span>
                 </div>
-                <div class="radar-countdown-wrap">
-                    <p class="radar-countdown-label">距下次预估重置</p>
-                    <div class="radar-countdown" id="radar-countdown">--:--:--</div>
-                    <p class="radar-countdown-hint" id="radar-next-hint">读取 data/radar.json …</p>
+                <p class="radar-countdown-label">距下次预估重置</p>
+                <div class="radar-countdown" id="radar-countdown">--:--:--</div>
+                <p class="radar-countdown-hint" id="radar-next-hint">读取 data/radar.json …</p>
+            </div>
+
+            <div class="radar-metrics">
+                <div class="radar-metric-card">
+                    <span class="radar-metric-icon" aria-hidden="true">📅</span>
+                    <span class="radar-metric-label">预计下次重置</span>
+                    <strong class="radar-metric-value" id="radar-next-estimate">—</strong>
                 </div>
-                <div class="radar-meta-grid">
-                    <div class="radar-meta">
-                        <span class="radar-meta-label">最近重置（观测）</span>
-                        <strong id="radar-last-reset">—</strong>
-                    </div>
-                    <div class="radar-meta">
-                        <span class="radar-meta-label">下次预估</span>
-                        <strong id="radar-next-estimate">—</strong>
-                    </div>
-                    <div class="radar-meta">
-                        <span class="radar-meta-label">时区</span>
-                        <strong id="radar-tz">Asia/Shanghai</strong>
-                    </div>
+                <div class="radar-metric-card">
+                    <span class="radar-metric-icon" aria-hidden="true">↺</span>
+                    <span class="radar-metric-label">上次观测重置</span>
+                    <strong class="radar-metric-value" id="radar-last-reset">—</strong>
                 </div>
-                <p class="radar-note" id="radar-note"></p>
-                <div class="radar-actions">
-                    <a class="btn-primary" id="radar-source-btn" href="https://x.com/thsottiaux" target="_blank" rel="noopener noreferrer">查看动态</a>
-                    <a class="btn-secondary" href="data/radar.json" target="_blank" rel="noopener">打开数据源 JSON</a>
+                <div class="radar-metric-card">
+                    <span class="radar-metric-icon" aria-hidden="true">🕒</span>
+                    <span class="radar-metric-label">数据更新时间</span>
+                    <strong class="radar-metric-value" id="radar-updated">—</strong>
+                </div>
+                <div class="radar-metric-card radar-metric-status">
+                    <span class="radar-metric-icon" aria-hidden="true">📡</span>
+                    <span class="radar-metric-label">状态</span>
+                    <strong class="radar-metric-value" id="radar-note">—</strong>
+                    <span class="radar-metric-tz" id="radar-tz">Asia/Shanghai</span>
                 </div>
             </div>
 
-            <div class="radar-side">
-                <div class="radar-explain card-panel">
-                    <h2>如何阅读本雷达</h2>
-                    <ul>
-                        <li>倒计时基于 <strong>nextEstimate</strong> 字段，仅为经验预估。</li>
-                        <li>历史列表记录站主手工观测，便于对照账号用量。</li>
-                        <li>公开讨论信号常出现在 X 用户 <strong>thsottiaux</strong> 动态，可点上方按钮查看。</li>
-                        <li>最终以你在 ChatGPT / Codex 账号内看到的配额为准。</li>
-                    </ul>
-                </div>
-                <div class="radar-edit card-panel">
-                    <h2>站主如何更新</h2>
-                    <p>编辑仓库中的 <code>data/radar.json</code>，修改 <code>lastResetAt</code>、<code>nextEstimate</code>、<code>note</code>、<code>history</code> 后推送到 GitHub Pages 即可。</p>
-                    <pre class="code-block">{
-  "lastResetAt": "2026-10-27T14:30:00+08:00",
-  "nextEstimate": "2026-10-29T08:00:00+08:00",
-  "note": "补充说明…",
-  "sourceUrl": "https://x.com/thsottiaux"
-}</pre>
-                </div>
+            <div class="radar-secondary-actions">
+                <a class="btn-secondary btn-sm" id="radar-source-btn" href="https://x.com/thsottiaux" target="_blank" rel="noopener noreferrer">查看 thsottiaux 动态</a>
+                <a class="btn-ghost btn-sm" href="data/radar.json" target="_blank" rel="noopener">打开数据源 JSON</a>
             </div>
         </section>
 
         <section class="radar-history-section">
             <div class="section-header">
                 <h2>观测历史</h2>
-                <p>按时间倒序展示手工记录；可在 JSON 的 history 数组中增删。</p>
+                <p>按时间倒序的手工记录，便于对照账号用量。</p>
             </div>
             <ol class="radar-timeline" id="radar-history">
                 <li class="radar-timeline-item muted">正在加载历史…</li>
             </ol>
         </section>
+
+        <details class="radar-admin-note">
+            <summary>站长如何更新数据</summary>
+            <p>编辑仓库中的 <code>data/radar.json</code>，修改 <code>lastResetAt</code>、<code>nextEstimate</code>、<code>note</code>、<code>history</code> 后推送到 GitHub Pages 即可。倒计时基于 nextEstimate 经验预估；最终以账号内配额为准。</p>
+        </details>
 
         <section class="customer-service">
             <h2>额度异常？找客服确认</h2>
