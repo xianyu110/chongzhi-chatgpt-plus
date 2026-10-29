@@ -30,6 +30,7 @@ python3 -m http.server 8080
 | `/grok/` | SuperGrok |
 | `/claude/` | Claude Mail / Pro / Max（购买入口 `https://wzyp.cn/item/ahu0j7`） |
 | `/faq/` | 常见问题 |
+| `/check/` | ChatGPT 账号检测（Session → 可否开通/升级） |
 | `/radar/` | 额度重置雷达 |
 | `/download-codex/` | Codex 下载教程 |
 | `/support/` | 客服中心 |

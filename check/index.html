@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT 账号检测 | GPTPro代充</title>
+    <meta name="description" content="GPTPro代充账号检测：粘贴 chatgpt.com/api/auth/session 完整 JSON，查看套餐与是否可开通 Plus / 升级续费。只读检测，不存储 Session。">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <meta name="theme-color" content="#17201A">
+    <meta property="og:image" content="https://chongzhi.chatgpt-plus.top/assets/icons/og-icon.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo">
+                <span class="logo-icon">G</span>
+                <span class="logo-text">GPTPro代充<span class="logo-sub">ChatGPT 账号检测</span></span>
+            </a>
+            <div class="navbar-links">
+                <a href="/" class="nav-tab">ChatGPT Plus</a>
+                <a href="/gemini/" class="nav-tab">Gemini</a>
+                <a href="/grok/" class="nav-tab">Grok</a>
+                <a href="/claude/" class="nav-tab">Claude</a>
+                <a href="/check/" class="nav-tab active">检测</a>
+                <a href="/radar/" class="nav-tab">雷达</a>
+                <a href="/download-codex/" class="nav-tab">Codex下载</a>
+                <a href="/faq/" class="nav-tab">常见问题</a>
+                <a href="/support/" class="nav-tab">客服</a>
+            </div>
+            <a href="/support/" class="navbar-cta">联系客服</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="check-hero">
+            <div class="hero-badge">只读检测 · 不存储 Session</div>
+            <h1 class="hero-title"><span class="hero-title-accent">账号检测</span></h1>
+            <p class="check-hero-sub">打开 ChatGPT 的 Session 接口，复制完整 JSON（必须含 <strong>accessToken</strong>）粘贴下方，即可查看当前套餐，以及是否<strong>可以开通</strong>或<strong>升级 / 续费</strong>——无需下单。</p>
+        </section>
+
+        <section class="check-panel" id="check-panel">
+            <label class="check-label" for="check-session-input">粘贴 Session JSON</label>
+            <textarea
+                id="check-session-input"
+                class="check-textarea"
+                rows="10"
+                spellcheck="false"
+                autocomplete="off"
+                placeholder='在已登录的浏览器中打开 Session 页，全选复制整页 JSON 后粘贴到这里'
+            ></textarea>
+
+            <div class="check-actions">
+                <button type="button" class="btn-primary check-run-btn" id="check-run-btn">开始检测</button>
+                <a
+                    class="btn-secondary btn-sm"
+                    id="check-open-session"
+                    href="https://chatgpt.com/api/auth/session"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >新标签打开 Session</a>
+                <button type="button" class="btn-ghost btn-sm" id="check-copy-link-btn">复制 Session 链接</button>
+            </div>
+
+            <ol class="check-steps">
+                <li>使用已登录 ChatGPT 的浏览器</li>
+                <li>点击「新标签打开 Session」，或先「复制 Session 链接」再粘贴到地址栏</li>
+                <li>在打开的页面上全选（Ctrl/Cmd + A）并复制完整 JSON</li>
+                <li>粘贴到上方输入框，点击「开始检测」</li>
+            </ol>
+
+            <p class="check-privacy" id="check-idle-note">
+                说明：本工具只读取订阅相关信息，不会改动你的账号。<strong>Session 仅用于本次检测，服务端不落库</strong>。检测完成后，建议回到 Session 页面刷新；刷新后刚才粘贴的 Token 会失效，更加安全。
+            </p>
+        </section>
+
+        <section class="check-result" id="check-result" hidden>
+            <div class="check-result-card" id="check-result-card">
+                <div class="check-result-top">
+                    <span class="check-verdict-pill" id="check-verdict-pill">—</span>
+                    <span class="check-checked-at" id="check-checked-at"></span>
+                </div>
+                <h2 class="check-verdict-title" id="check-verdict-title">等待检测</h2>
+                <p class="check-verdict-msg" id="check-verdict-msg"></p>
+
+                <dl class="check-meta" id="check-meta"></dl>
+
+                <div class="check-cta" id="check-cta">
+                    <button type="button" class="check-again" id="check-again-btn">检测另一个号</button>
+                    <a class="btn-primary" href="/#pricing" id="check-pricing-btn" hidden>查看代充价格</a>
+                    <a class="btn-secondary" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer" id="check-qq-btn" hidden>QQ 客服 1002569303</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="customer-service">
+            <h2>检测结果拿不准？</h2>
+            <p class="cs-subtitle">说明账号情况或发送检测结论，转人工确认是否可充</p>
+            <div class="service-info">
+                <div class="service-item">
+                    <span class="service-label">客服QQ：</span>
+                    <span class="service-value">1002569303</span>
+                </div>
+                <div class="service-note">
+                    <p><a class="inline-qq" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">点此打开 QQ 会话</a>（或添加 QQ 1002569303）</p>
+                    <p>也可前往 <a href="/support/">客服中心</a> 查看常见问答。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">G</span>
+                        <span>GPTPro代充</span>
+                    </div>
+                    <p>提供安全、极速的 AI 充值与账号服务</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>服务</h4>
+                        <a href="/">ChatGPT Plus / GPT Pro 代充</a>
+                        <a href="/gemini/">Gemini 账号 &amp; 充值</a>
+                        <a href="/grok/">SuperGrok 充值</a>
+                        <a href="/claude/">Claude 充值</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>工具与帮助</h4>
+                        <a href="/check/">账号检测</a>
+                        <a href="/radar/">额度重置雷达</a>
+                        <a href="/download-codex/">Codex 下载教程</a>
+                        <a href="/faq/">常见问题</a>
+                        <a href="/support/">客服中心</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>联系我们</h4>
+                        <p>QQ: 1002569303</p>
+                        <p>9:00 - 次日 4:00 在线</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024-2026 GPTPro代充. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script src="/js/check.js"></script>
+</body>
+</html>
