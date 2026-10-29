@@ -6,7 +6,7 @@
 >   [Codex 国内站｜中转站教程](https://doc.momoai.asia/blog/codex-china-gpt-5-6-launch)  
 > 两条线不要混用：直连靠 **ChatGPT 账号订阅登录**；中转靠 **API Key + 中转域名**。
 
-客服 QQ：**1002569303** · [客服中心](https://chongzhi.chatgpt-plus.top/support/) · [额度重置雷达](https://chongzhi.chatgpt-plus.top/radar/)
+客服 QQ：**1002569303** · [客服中心](https://chongzhi.chatgpt-plus.top/support/) · [额度重置雷达](https://codexinstall.asia/zh/codex-reset/)
 
 ---
 
@@ -47,7 +47,7 @@
 - 把直连账号的密码当成中转站 API Key 去填 cc-switch  
 - 自行编造或猜测登录方式——发货方式以订单与客服 QQ **1002569303** 为准  
 
-额度重置可参考站内 [额度重置雷达](https://chongzhi.chatgpt-plus.top/radar/)（手工观测数据，非伪装分钟级第三方接口）。
+额度重置可参考友链 [额度重置雷达](https://codexinstall.asia/zh/codex-reset/)（手工观测数据，非伪装分钟级第三方接口）。
 
 ---
 
@@ -97,7 +97,7 @@
 2. 开一个小任务试水，例如：  
    `帮我列出当前文件夹结构，并写一段 README 大纲。`  
 3. 确认能正常回复、能读写你选择的工作区文件。  
-4. 在账户 / 用量相关入口查看是否仍有 Codex 额度；额度节奏可对照 [雷达页](https://chongzhi.chatgpt-plus.top/radar/)。  
+4. 在账户 / 用量相关入口查看是否仍有 Codex 额度；额度节奏可对照 [雷达页](https://codexinstall.asia/zh/codex-reset/)。  
 5. Plus 适合每周若干次集中编程；Pro 额度更高，适合更重度日常开发——以你购买的套餐为准。
 
 ---
@@ -152,7 +152,7 @@ Codex 虽在多档计划有入口，但稳定编程额度通常需要 **Plus / P
 
 - 本站首页（购买 Plus / Pro）：https://chongzhi.chatgpt-plus.top/  
 - 客户端下载速览：https://chongzhi.chatgpt-plus.top/download-codex/  
-- 额度重置雷达：https://chongzhi.chatgpt-plus.top/radar/  
+- 额度重置雷达：https://codexinstall.asia/zh/codex-reset/  
 - 客服中心：https://chongzhi.chatgpt-plus.top/support/  
 - 客服 QQ：1002569303  
 - 官方下载：https://chatgpt.com/download/  
