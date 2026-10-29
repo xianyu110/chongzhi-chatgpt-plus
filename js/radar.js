@@ -1,5 +1,5 @@
 (function () {
-    var DATA_URL = 'data/radar.json';
+    var DATA_URL = '/data/radar.json';
     var countdownTimer = null;
 
     function $(id) { return document.getElementById(id); }

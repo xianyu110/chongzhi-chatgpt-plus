@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Codex / ChatGPT 客户端下载教程 | GPTPro代充</title>
+    <meta name="description" content="GPTPro代充整理的 Windows Codex / ChatGPT 官方客户端安装指引：微软商店、官方下载页与 PowerShell 备选方案；买号后直连 Codex 指南为本站主推；中转站/API 为备选路径。">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <meta name="theme-color" content="#6366f1">
+    <meta property="og:image" content="https://chongzhi.chatgpt-plus.top/assets/icons/og-icon.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo">
+                <img class="logo-mark" src="/assets/icons/logo.svg" width="36" height="36" alt="" decoding="async">
+                <span class="logo-text">GPTPro代充<span class="logo-sub">Codex 客户端下载</span></span>
+            </a>
+            <div class="navbar-links">
+                <a href="/" class="nav-tab">ChatGPT Plus</a>
+                <a href="/gemini/" class="nav-tab">Gemini</a>
+                <a href="/grok/" class="nav-tab">Grok</a>
+                <a href="/claude/" class="nav-tab">Claude</a>
+                <a href="/radar/" class="nav-tab">雷达</a>
+                <a href="/download-codex/" class="nav-tab active">Codex下载</a>
+                <a href="/faq/" class="nav-tab">常见问题</a>
+                <a href="/support/" class="nav-tab">客服</a>
+            </div>
+            <a href="/blog/codex-direct/" class="navbar-cta">直连教程</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero hero-sm">
+            <div class="hero-badge">官方商店优先 · 买号后直连 Codex</div>
+            <h1 class="hero-title">Windows <span class="hero-title-accent">Codex / ChatGPT</span> 客户端下载</h1>
+            <p class="hero-desc">官方 Windows 包为 Microsoft Store 分发的 <strong>.msix</strong>，由 Microsoft / OpenAI 签名。下面给出商店与官方入口的简短步骤。买号 / 代充后用账号登录官方客户端，请看<strong>直连教程</strong>；若走 API / 中转站，再看备选文档。</p>
+        </section>
+
+        <!-- Primary: direct-use guide; Secondary: mid-relay -->
+        <section class="guide-cta-banner" id="full-guide">
+            <div class="guide-cta-badge">推荐 · 买号后直连</div>
+            <h2>买号后直连使用 Codex（官方登录，非中转）</h2>
+            <p>已在 GPTPro代充购买 ChatGPT Plus / Pro？安装本页客户端后，用账号 <strong>Sign in with ChatGPT</strong> 登录，在应用内打开 Codex。本页只做官方/商店安全速览；登录、首用与排错以直连指南为准。</p>
+            <div class="guide-cta-actions">
+                <a class="btn-primary btn-lg" href="/blog/codex-direct/">打开直连教程 →</a>
+                <a class="btn-secondary" href="https://doc.momoai.asia/blog/codex-china-gpt-5-6-launch" target="_blank" rel="noopener noreferrer">若走 API/中转（备选）</a>
+            </div>
+            <p class="guide-cta-meta">主路径：chongzhi · /blog/codex-direct/ · 中转文见 doc.momoai.asia</p>
+        </section>
+
+        <section class="dl-grid" id="quick-install">
+            <article class="dl-card featured-card">
+                <span class="pricing-badge hot">Windows</span>
+                <h3>微软商店安装（推荐）</h3>
+                <p class="pricing-desc">在 Microsoft Store 搜索「ChatGPT」或「OpenAI Codex」，安装由 OpenAI 发布的官方应用。新版桌面端集成 Chat、Work 与 Codex。</p>
+                <ol class="step-list">
+                    <li>打开系统自带的 <strong>Microsoft Store</strong>。</li>
+                    <li>搜索 <strong>ChatGPT</strong>（发布者 OpenAI），或打开下方商店详情页。</li>
+                    <li>点击「获取 / 安装」，等待 .msix 完成。</li>
+                    <li>开始菜单找到 <strong>ChatGPT</strong>，用 ChatGPT 账号登录。</li>
+                    <li>在应用内切换到 <strong>Codex</strong> 视图即可编程。</li>
+                </ol>
+                <div class="dl-links">
+                    <a class="btn-primary btn-block" href="https://apps.microsoft.com/detail/9plm9xgg6vks" target="_blank" rel="noopener noreferrer">打开 Microsoft Store 详情页</a>
+                    <a class="btn-secondary btn-block" href="https://chatgpt.com/download/" target="_blank" rel="noopener noreferrer">官方 Download 页</a>
+                    <a class="btn-secondary btn-block" href="https://pan.quark.cn/s/0f1763fe2ac9?pwd=rTQw" target="_blank" rel="noopener noreferrer">网盘下载（夸克 · 提取码 rTQw）</a>
+                </div>
+            </article>
+
+            <article class="dl-card">
+                <span class="pricing-badge">macOS</span>
+                <h3>Mac 用户请走官方文档</h3>
+                <p class="pricing-desc">macOS 桌面端请以 OpenAI 学习中心与官方下载为准，勿使用来路不明的「破解包」。</p>
+                <ol class="step-list">
+                    <li>阅读官方应用说明文档。</li>
+                    <li>从可信渠道下载并安装。</li>
+                    <li>登录同一 ChatGPT 账号后使用 Codex。</li>
+                </ol>
+                <div class="dl-links">
+                    <a class="btn-primary btn-block" href="https://learn.chatgpt.com/docs/app" target="_blank" rel="noopener noreferrer">OpenAI 学习中心 · App 文档</a>
+                    <a class="btn-secondary btn-block" href="https://chatgpt.com/download/" target="_blank" rel="noopener noreferrer">chatgpt.com/download</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="card-panel warn-panel">
+            <h2>⚠️ 请勿使用会改写 API 地址的第三方「Codex 安装器」</h2>
+            <ul class="warn-list">
+                <li>部分来路不明的 exe / 脚本会悄悄改写 API Endpoint、注入代理或窃取密钥。</li>
+                <li>优先使用 <strong>Microsoft Store</strong> 或 OpenAI / chatgpt.com 官方页面。</li>
+                <li>若必须配置国内中转，请按<strong>备选中转教程</strong>中的 cc-switch 步骤操作，不要运行未知一键包；买号直连请看 <a href="/blog/codex-direct/">直连指南</a>。</li>
+                <li>安装后核对：发布者为 OpenAI；商店包为 Microsoft 签名分发。</li>
+            </ul>
+        </section>
+
+        <section class="card-panel">
+            <h2>精简版 Windows / 无商店环境备选</h2>
+            <p>部分企业镜像禁用 Microsoft Store。可先确认 IT 策略是否允许商店应用；若仅缺 Store 客户端，可尝试用管理员 PowerShell 从商店源安装（需网络与微软账号策略允许）：</p>
+            <pre class="code-block"># 示例：通过 winget 从 msstore 安装（包 ID 以商店页为准，安装前请核验）
+winget install --id 9PLM9XGG6VKS --source msstore --accept-package-agreements --accept-source-agreements</pre>
+            <p class="muted-note">若 winget / 商店均不可用：可用本站<strong>网盘下载</strong>获取 Windows 本地安装包（与 <a href="https://doc.momoai.asia/blog/codex-china-gpt-5-6-launch" target="_blank" rel="noopener noreferrer">中转教程</a>同源夸克分享：<a href="https://pan.quark.cn/s/0f1763fe2ac9?pwd=rTQw" target="_blank" rel="noopener noreferrer">打开网盘 · 提取码 rTQw</a>），或阅读<a href="/blog/codex-direct/">直连教程</a>；不要下载未签名的「绿色破解版」。</p>
+            <p>官方 Windows 使用说明：<a href="https://help.openai.com/en/articles/9982051-using-chatgpt-for-windows" target="_blank" rel="noopener noreferrer">Using the ChatGPT Windows app</a></p>
+        </section>
+
+        <section class="card-panel">
+            <h2>安装后三步上手</h2>
+            <div class="mini-steps">
+                <div class="mini-step">
+                    <span class="mini-num">1</span>
+                    <div>
+                        <h3>安装完成</h3>
+                        <p>确认开始菜单出现 ChatGPT，且来自 OpenAI。</p>
+                    </div>
+                </div>
+                <div class="mini-step">
+                    <span class="mini-num">2</span>
+                    <div>
+                        <h3>登录账号</h3>
+                        <p>使用已充值的 ChatGPT 账号登录（Plus / Pro 等以套餐为准）。</p>
+                    </div>
+                </div>
+                <div class="mini-step">
+                    <span class="mini-num">3</span>
+                    <div>
+                        <h3>进入 Codex</h3>
+                        <p>在桌面端切换到 Codex；买号用户按<a href="/blog/codex-direct/">直连教程</a>登录；中转用户再配密钥。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-actions" style="margin-top:28px;margin-bottom:0;">
+                <a class="btn-primary" href="/blog/codex-direct/">继续阅读直连教程</a>
+                <a class="btn-secondary" href="https://doc.momoai.asia/blog/codex-china-gpt-5-6-launch" target="_blank" rel="noopener noreferrer">中转站教程（备选）</a>
+                <a class="btn-secondary" href="/support/">遇到问题找客服</a>
+            </div>
+        </section>
+
+        <section class="customer-service">
+            <h2>安装卡住？转人工 QQ</h2>
+            <p class="cs-subtitle">客服 QQ 1002569303 · 可协助核对是否为官方包、登录与配置问题</p>
+            <div class="service-info">
+                <div class="service-item">
+                    <span class="service-label">客服QQ：</span>
+                    <span class="service-value">1002569303</span>
+                </div>
+                <div class="service-note">
+                    <p><a class="inline-qq" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">点此打开 QQ 会话</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img class="logo-mark" src="/assets/icons/logo.svg" width="36" height="36" alt="" decoding="async">
+                        <span>GPTPro代充</span>
+                    </div>
+                    <p>提供安全、极速的 AI 充值与账号服务</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>服务</h4>
+                        <a href="/">ChatGPT Plus / GPT Pro 代充</a>
+                        <a href="/gemini/">Gemini</a>
+                        <a href="/grok/">Grok</a>
+                        <a href="/claude/">Claude</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>工具与帮助</h4>
+                        <a href="/radar/">额度重置雷达</a>
+                        <a href="/download-codex/">Codex 下载教程</a>
+                        <a href="/blog/codex-direct/">买号后直连 Codex</a>
+                        <a href="https://doc.momoai.asia/blog/codex-china-gpt-5-6-launch" target="_blank" rel="noopener noreferrer">中转站教程（备选）</a>
+                        <a href="/support/">客服中心</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>联系我们</h4>
+                        <p>QQ: 1002569303</p>
+                        <p>9:00 - 次日 4:00 在线</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024-2026 GPTPro代充. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

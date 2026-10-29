@@ -20,11 +20,26 @@ python3 -m http.server 8080
 - 自定义域名：<https://chongzhi.chatgpt-plus.top/>
 - 客服 QQ：`1002569303`
 
-## 页面
+## 页面（Clean URLs）
 
-- `index.html`：ChatGPT Plus / GPT Pro
-- `gemini.html`：Gemini
-- `grok.html`：SuperGrok
-- `claude.html`：Claude Mail / Pro / Max（站内页，购买入口 `https://wzyp.cn/item/ahu0j7`）
-- `faq.html`：常见问题
+| URL | 说明 |
+|-----|------|
+| `/` | ChatGPT Plus / GPT Pro |
+| `/en/` | English home |
+| `/gemini/` | Gemini |
+| `/grok/` | SuperGrok |
+| `/claude/` | Claude Mail / Pro / Max（购买入口 `https://wzyp.cn/item/ahu0j7`） |
+| `/faq/` | 常见问题 |
+| `/radar/` | 额度重置雷达 |
+| `/download-codex/` | Codex 下载教程 |
+| `/support/` | 客服中心 |
+| `/blog/codex-direct/` | 买号后直连 Codex |
 
+旧的 `*.html` 路径保留薄跳转页，自动重定向到上述 clean URL。
+
+## 品牌资源
+
+- `/assets/icons/logo.svg`：导航栏图标
+- `/assets/icons/favicon.svg` / `favicon.ico`：站点图标
+- `/assets/icons/apple-touch-icon.png`：Apple touch icon
+- `/assets/icons/og-icon.png`：OG 预览图

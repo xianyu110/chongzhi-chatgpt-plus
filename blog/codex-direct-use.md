@@ -6,7 +6,7 @@
 >   [Codex 国内站｜中转站教程](https://doc.momoai.asia/blog/codex-china-gpt-5-6-launch)  
 > 两条线不要混用：直连靠 **ChatGPT 账号订阅登录**；中转靠 **API Key + 中转域名**。
 
-客服 QQ：**1002569303** · [客服中心](https://chongzhi.chatgpt-plus.top/support.html) · [额度重置雷达](https://chongzhi.chatgpt-plus.top/radar.html)
+客服 QQ：**1002569303** · [客服中心](https://chongzhi.chatgpt-plus.top/support/) · [额度重置雷达](https://chongzhi.chatgpt-plus.top/radar/)
 
 ---
 
@@ -30,7 +30,7 @@
 | 客户端 | 官方 Microsoft Store / chatgpt.com / Mac 官方包 | 可配合 cc-switch 等 |
 | 是否改 API 地址 | **不要改**，用官方登录 | 按中转教程配置 |
 | 网络 | 需能正常访问官方 ChatGPT / OpenAI 服务 | 国内中转站强调免魔法 |
-| 文档入口 | 本文 + [客户端下载页](https://chongzhi.chatgpt-plus.top/download-codex.html) | [doc.momoai 中转教程](https://doc.momoai.asia/blog/codex-china-gpt-5-6-launch) |
+| 文档入口 | 本文 + [客户端下载页](https://chongzhi.chatgpt-plus.top/download-codex/) | [doc.momoai 中转教程](https://doc.momoai.asia/blog/codex-china-gpt-5-6-launch) |
 
 ---
 
@@ -47,13 +47,13 @@
 - 把直连账号的密码当成中转站 API Key 去填 cc-switch  
 - 自行编造或猜测登录方式——发货方式以订单与客服 QQ **1002569303** 为准  
 
-额度重置可参考站内 [额度重置雷达](https://chongzhi.chatgpt-plus.top/radar.html)（手工观测数据，非伪装分钟级第三方接口）。
+额度重置可参考站内 [额度重置雷达](https://chongzhi.chatgpt-plus.top/radar/)（手工观测数据，非伪装分钟级第三方接口）。
 
 ---
 
 ## 第二步：安装官方 Windows / Mac 客户端
 
-优先官方渠道，安装细节与商店链接见：[Windows Codex / ChatGPT 客户端下载教程](https://chongzhi.chatgpt-plus.top/download-codex.html)。
+优先官方渠道，安装细节与商店链接见：[Windows Codex / ChatGPT 客户端下载教程](https://chongzhi.chatgpt-plus.top/download-codex/)。
 
 备用：**网盘下载**（夸克，Windows 本地包，提取码 `rTQw`）：https://pan.quark.cn/s/0f1763fe2ac9?pwd=rTQw
 
@@ -97,7 +97,7 @@
 2. 开一个小任务试水，例如：  
    `帮我列出当前文件夹结构，并写一段 README 大纲。`  
 3. 确认能正常回复、能读写你选择的工作区文件。  
-4. 在账户 / 用量相关入口查看是否仍有 Codex 额度；额度节奏可对照 [雷达页](https://chongzhi.chatgpt-plus.top/radar.html)。  
+4. 在账户 / 用量相关入口查看是否仍有 Codex 额度；额度节奏可对照 [雷达页](https://chongzhi.chatgpt-plus.top/radar/)。  
 5. Plus 适合每周若干次集中编程；Pro 额度更高，适合更重度日常开发——以你购买的套餐为准。
 
 ---
@@ -116,7 +116,7 @@ Codex 虽在多档计划有入口，但稳定编程额度通常需要 **Plus / P
 ### 3. 第三方假安装包 / 会改 API 的「Codex 安装器」
 
 部分不明 exe / 脚本会改写 API Endpoint、注入代理或窃取密钥。  
-**只认**：Microsoft Store、chatgpt.com 官方下载、学习中心文档。详见[下载页安全提示](https://chongzhi.chatgpt-plus.top/download-codex.html)。
+**只认**：Microsoft Store、chatgpt.com 官方下载、学习中心文档。详见[下载页安全提示](https://chongzhi.chatgpt-plus.top/download-codex/)。
 
 ### 4. 把直连和中转 API Key 搞混
 
@@ -151,9 +151,9 @@ Codex 虽在多档计划有入口，但稳定编程额度通常需要 **Plus / P
 ## 相关链接
 
 - 本站首页（购买 Plus / Pro）：https://chongzhi.chatgpt-plus.top/  
-- 客户端下载速览：https://chongzhi.chatgpt-plus.top/download-codex.html  
-- 额度重置雷达：https://chongzhi.chatgpt-plus.top/radar.html  
-- 客服中心：https://chongzhi.chatgpt-plus.top/support.html  
+- 客户端下载速览：https://chongzhi.chatgpt-plus.top/download-codex/  
+- 额度重置雷达：https://chongzhi.chatgpt-plus.top/radar/  
+- 客服中心：https://chongzhi.chatgpt-plus.top/support/  
 - 客服 QQ：1002569303  
 - 官方下载：https://chatgpt.com/download/  
 - 官方 App 文档：https://learn.chatgpt.com/docs/app  

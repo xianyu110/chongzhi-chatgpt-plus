@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
             '<p>客服 QQ <strong>1002569303</strong>。也可打开站内客服中心查看速答。</p>' +
             '<div class="float-cs-actions">' +
             '<a class="primary" href="https://wpa.qq.com/msgrd?v=3&uin=1002569303&site=qq&menu=yes" target="_blank" rel="noopener noreferrer">转人工 QQ</a>' +
-            '<a class="secondary" href="support.html">客服中心</a>' +
+            '<a class="secondary" href="/support/">客服中心</a>' +
             '<a class="secondary" href="tencent://message/?uin=1002569303">打开 QQ 客户端</a>' +
             '</div></div>' +
             '<button type="button" class="float-cs-btn" id="float-cs-btn" aria-expanded="false" aria-controls="float-cs-panel">客服<br>QQ</button>';
