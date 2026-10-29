@@ -1293,9 +1293,10 @@ body {
 }
 
 .price-period {
-    font-size: 0.9rem;
-    color: #94a3b8;
-    margin-left: 4px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #64748B;
+    margin-left: 6px;
 }
 
 .pricing-meta {
@@ -1331,7 +1332,7 @@ body {
 .pricing-features {
     list-style: none;
     padding: 0;
-    margin-bottom: 24px;
+    margin: 4px 0 20px;
     flex: 1;
 }
 
@@ -1348,7 +1349,7 @@ body {
     content: '\2713';
     position: absolute;
     left: 0;
-    color: #10b981;
+    color: #17201A;
     font-weight: 700;
 }
 
@@ -2786,6 +2787,22 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.pricing-title-row .invoice-pill {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 9px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: #475569;
+    background: #F1F3F2;
+    border: 1px solid #E8EAE9;
+    white-space: nowrap;
 }
 
 .pricing-title-row .product-mark {
