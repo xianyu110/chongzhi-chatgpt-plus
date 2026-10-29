@@ -99,7 +99,7 @@ def build_home(code):
         _card("ChatGPT Plus", "", g["official20"], "1XX", g["c1_feats"], "https://wzyp.cn/item/bp1jdo", g, buy, period),
         _card("ChatGPT Pro", "5x", g["official100"], "780.00", g["c2_feats"], "https://momoai.czvip.cn/products/m23", g, buy, period),
         _card("ChatGPT Pro", "20x", g["official200"], "1280.00", g["c3_feats"], "https://momoai.czvip.cn/products/m24", g, buy, period, featured=True, accent_tier=True),
-        _card("ChatGPT Pro", "25x", g["official_direct"], "3600.00", g["c4_feats"], "https://momoai.czvip.cn/products/gpt-pro-25x", g, buy, period),
+        _card("ChatGPT Pro", "50x", g["official_direct"], "3600.00", g["c4_feats"], "https://momoai.czvip.cn/products/gpt-pro-25x", g, buy, period),
     ])
 
     trust = "\n".join(

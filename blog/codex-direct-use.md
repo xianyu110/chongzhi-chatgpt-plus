@@ -15,7 +15,7 @@
 适合已经在 **GPTPro代充 / chongzhi** 完成购买，希望尽快用上官方 Codex 的用户，例如：
 
 - 购买了 **独享 ChatGPT Plus 账号**，或完成 Plus 代充 / 续费  
-- 购买了 **GPT Pro**（5X / 20X / 25X 等）月卡充值  
+- 购买了 **GPT Pro**（5X / 20X / 50X 等）月卡充值  
 - 账号本身已具备 Codex 使用资格，想用 **官方桌面端** 写代码、改项目  
 
 不适合：只想免魔法、走 API 中转、用 cc-switch 填 `gpt-6-astra` 那一套——那是[中转站文章](https://doc.momoai.asia/blog/codex-china-gpt-5-6-launch)的路径。
