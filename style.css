@@ -2807,11 +2807,12 @@ body {
 
 .pricing-title-row .product-mark {
     flex-shrink: 0;
-    width: 28px;
-    height: 28px;
-    border-radius: 7px;
+    width: 26px;
+    height: 26px;
+    border-radius: 0;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
+    filter: none;
 }
 
 .pricing-title-row h3 {
