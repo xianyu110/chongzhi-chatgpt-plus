@@ -27,7 +27,7 @@ python3 -m http.server 8080
 | `/` | ChatGPT Plus / GPT Pro |
 | `/en/` | English home |
 | `/gemini/` | Gemini |
-| `/grok/` | SuperGrok |
+| `/grok/` | SuperGrok（购买入口主链 `https://wzyp.cn/item/6cegy9`，备用 `https://wzyp.cn/item/yfz403`） |
 | `/claude/` | Claude Mail / Pro / Max（购买入口 `https://wzyp.cn/item/ahu0j7`） |
 | `/faq/` | 常见问题 |
 | `/check/` | ChatGPT 账号检测（Session → 可否开通/升级） |

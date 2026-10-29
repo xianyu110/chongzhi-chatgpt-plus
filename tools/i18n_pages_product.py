@@ -657,7 +657,7 @@ def build_grok(code: str) -> str:
     )
     return f"""{head_common(g['title'], g['desc'], html_lang, 'grok/')}
 <body>
-{nav_html(code, 'grok/', t, 'grok', 'https://wzyp.cn/shop/maynorai/gyx7gn', g['cta'])}
+{nav_html(code, 'grok/', t, 'grok', 'https://wzyp.cn/item/6cegy9', g['cta'])}
 
     <div class="container">
         <section class="hero">
@@ -665,7 +665,7 @@ def build_grok(code: str) -> str:
             <h1 class="hero-title"><img class="hero-brand-mark" src="{ICON['grok']}" width="40" height="40" alt="" aria-hidden="true"> {g['h1']}</h1>
             <p class="hero-desc">{g['hero']}</p>
             <div class="hero-actions">
-                <a href="https://wzyp.cn/shop/maynorai/gyx7gn" target="_blank" rel="noopener noreferrer" class="btn-primary">{g['buy']}</a>
+                <a href="https://wzyp.cn/item/6cegy9" target="_blank" rel="noopener noreferrer" class="btn-primary">{g['buy']}</a>
                 <a href="https://quickplus.vip/public/x_plus/" target="_blank" rel="noopener noreferrer" class="btn-secondary">{g['self']}</a>
             </div>
             <div class="hero-tags">
@@ -701,7 +701,7 @@ def build_grok(code: str) -> str:
                     <ul class="pricing-features">
 {feats}
                     </ul>
-                    <a href="https://wzyp.cn/shop/maynorai/gyx7gn" target="_blank" rel="noopener noreferrer" class="btn-primary btn-block">{g['btn']}</a>
+                    <a href="https://wzyp.cn/item/6cegy9" target="_blank" rel="noopener noreferrer" class="btn-primary btn-block">{g['btn']}</a>
                 </div>
             </div>
             <div class="pricing-note"><p>{g['note']}</p></div>
