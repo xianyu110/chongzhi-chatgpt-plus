@@ -3468,3 +3468,34 @@ body {
         align-items: flex-start;
     }
 }
+
+
+/* AI brand icons in nav + heroes */
+.nav-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.nav-ai-icon {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+}
+.hero-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.hero-brand-mark {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+.pricing-card > .pricing-title-row {
+    margin-top: 4px;
+}
