@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setupEventListeners();
         setupFAQ();
         setupMobileMenu();
+        setupNavDropdowns();
         setupTestimonialsScroll();
         setupFloatingCS();
     }
@@ -47,6 +48,62 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Toggle current item
                 item.classList.toggle('active', !isActive);
             });
+        });
+    }
+
+
+    // Nav dropdowns (desktop click/hover via CSS; click + Escape + mobile accordion)
+    function setupNavDropdowns() {
+        var dropdowns = Array.prototype.slice.call(document.querySelectorAll('.nav-dropdown'));
+        if (!dropdowns.length) return;
+
+        function closeAll(except) {
+            dropdowns.forEach(function(dd) {
+                if (dd === except) return;
+                dd.classList.remove('open');
+                var btn = dd.querySelector('.nav-dropdown-toggle');
+                if (btn) btn.setAttribute('aria-expanded', 'false');
+            });
+        }
+
+        function isMobileNav() {
+            return window.matchMedia('(max-width: 768px)').matches;
+        }
+
+        dropdowns.forEach(function(dd) {
+            var btn = dd.querySelector('.nav-dropdown-toggle');
+            if (!btn) return;
+
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var willOpen = !dd.classList.contains('open');
+                closeAll(dd);
+                dd.classList.toggle('open', willOpen);
+                btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.nav-dropdown')) {
+                closeAll();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeAll();
+            }
+        });
+
+        // Close open dropdowns when resizing across breakpoint
+        var lastMobile = isMobileNav();
+        window.addEventListener('resize', function() {
+            var now = isMobileNav();
+            if (now !== lastMobile) {
+                closeAll();
+                lastMobile = now;
+            }
         });
     }
 

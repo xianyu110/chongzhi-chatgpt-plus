@@ -24,11 +24,25 @@
                 <a href="/gemini/" class="nav-tab">Gemini</a>
                 <a href="/grok/" class="nav-tab">Grok</a>
                 <a href="/claude/" class="nav-tab">Claude</a>
-                <a href="/check/" class="nav-tab">检测</a>
-                <a class="nav-tab" href="https://codexinstall.asia/zh/codex-reset/" target="_blank" rel="noopener noreferrer">雷达</a>
-                <a href="/download-codex/" class="nav-tab">Codex下载</a>
-                <a href="/faq/" class="nav-tab">常见问题</a>
-                <a href="/support/" class="nav-tab">客服</a>
+                <div class="nav-dropdown">
+                    <button type="button" class="nav-tab nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        工具 <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="/check/" class="nav-dropdown-item" role="menuitem">检测</a>
+                        <a class="nav-dropdown-item" href="https://codexinstall.asia/zh/codex-reset/" target="_blank" rel="noopener noreferrer" role="menuitem">雷达</a>
+                        <a href="/download-codex/" class="nav-dropdown-item" role="menuitem">Codex下载</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <button type="button" class="nav-tab nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        帮助 <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="/faq/" class="nav-dropdown-item" role="menuitem">常见问题</a>
+                        <a href="/support/" class="nav-dropdown-item" role="menuitem">客服</a>
+                    </div>
+                </div>
             </div>
             <a href="/support/" class="navbar-cta">客服 QQ</a>
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="菜单">
