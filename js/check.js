@@ -23,6 +23,34 @@
 
     function $(id) { return document.getElementById(id); }
 
+    function setStatus(kind, text) {
+        var pill = $('check-status-pill');
+        var dot = document.querySelector('.check-source-dot');
+        if (pill) {
+            pill.textContent = text;
+            pill.classList.remove('is-ready', 'is-busy');
+            if (kind === 'ready') pill.classList.add('is-ready');
+            if (kind === 'busy') pill.classList.add('is-busy');
+        }
+        if (dot) {
+            dot.classList.remove('is-ready', 'is-busy');
+            if (kind === 'ready') dot.classList.add('is-ready');
+            if (kind === 'busy') dot.classList.add('is-busy');
+        }
+    }
+
+    function syncInputState() {
+        var input = $('check-session-input');
+        if (!input) return;
+        var has = input.value.trim().length > 0;
+        input.classList.toggle('has-content', has);
+        var hint = $('check-field-hint');
+        if (hint) hint.style.opacity = has ? '0' : '1';
+        if (has) setStatus('ready', '已粘贴');
+        else setStatus('', '等待粘贴');
+    }
+
+
     function maskEmail(email) {
         if (!email || typeof email !== 'string') return '';
         var at = email.indexOf('@');
@@ -63,9 +91,13 @@
 
     function setLoading(on) {
         var btn = $('check-run-btn');
+        var paste = $('check-paste-btn');
         if (!btn) return;
         btn.disabled = !!on;
         btn.textContent = on ? '检测中…' : '开始检测';
+        if (paste) paste.disabled = !!on;
+        if (on) setStatus('busy', '检测中');
+        else syncInputState();
     }
 
     function pillClass(answer) {
@@ -271,4 +303,32 @@
     if (again) again.addEventListener('click', resetForAnother);
     var copyBtn = $('check-copy-link-btn');
     if (copyBtn) copyBtn.addEventListener('click', copySessionLink);
+
+    var sessionInput = $('check-session-input');
+    if (sessionInput) {
+        sessionInput.addEventListener('input', syncInputState);
+        sessionInput.addEventListener('paste', function () {
+            window.setTimeout(syncInputState, 0);
+        });
+        syncInputState();
+    }
+
+    var pasteBtn = $('check-paste-btn');
+    if (pasteBtn) {
+        pasteBtn.addEventListener('click', function () {
+            if (!navigator.clipboard || !navigator.clipboard.readText) {
+                alert('当前浏览器不支持读取剪贴板，请手动粘贴到输入框。');
+                return;
+            }
+            navigator.clipboard.readText().then(function (text) {
+                var input = $('check-session-input');
+                if (!input) return;
+                input.value = text || '';
+                syncInputState();
+                input.focus();
+            }).catch(function () {
+                alert('无法读取剪贴板，请允许权限后重试，或手动粘贴。');
+            });
+        });
+    }
 })();

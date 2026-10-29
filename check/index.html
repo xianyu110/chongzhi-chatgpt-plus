@@ -39,43 +39,50 @@
 
     <div class="container">
         <section class="check-hero">
-            <div class="hero-badge">只读检测 · 不存储 Session</div>
-            <h1 class="hero-title"><span class="hero-title-accent">账号检测</span></h1>
-            <p class="check-hero-sub">打开 ChatGPT 的 Session 接口，复制完整 JSON（必须含 <strong>accessToken</strong>）粘贴下方，即可查看当前套餐，以及是否<strong>可以开通</strong>或<strong>升级 / 续费</strong>——无需下单。</p>
+            <div class="hero-badge">只读 · 不存 Session · 不用下单</div>
+            <h1 class="hero-title">这个号<span class="hero-title-accent">能不能开？</span></h1>
+            <p class="check-hero-sub">粘贴 <code>chatgpt.com/api/auth/session</code> 整页 JSON（须含 <strong>accessToken</strong>），几秒看清套餐，以及能不能开通 / 升级续费。</p>
         </section>
 
         <section class="check-panel" id="check-panel">
+            <div class="check-panel-head">
+                <div class="check-source">
+                    <span class="check-source-dot" aria-hidden="true"></span>
+                    <span class="check-source-name">ChatGPT Session</span>
+                    <span class="check-status-pill" id="check-status-pill">等待粘贴</span>
+                </div>
+                <div class="check-helpers">
+                    <a class="check-helper-link" id="check-open-session" href="https://chatgpt.com/api/auth/session" target="_blank" rel="noopener noreferrer">打开 Session</a>
+                    <button type="button" class="check-helper-btn" id="check-copy-link-btn">复制链接</button>
+                </div>
+            </div>
+
             <label class="check-label" for="check-session-input">粘贴 Session JSON</label>
-            <textarea
-                id="check-session-input"
-                class="check-textarea"
-                rows="10"
-                spellcheck="false"
-                autocomplete="off"
-                placeholder='在已登录的浏览器中打开 Session 页，全选复制整页 JSON 后粘贴到这里'
-            ></textarea>
+            <div class="check-field">
+                <textarea
+                    id="check-session-input"
+                    class="check-textarea"
+                    rows="9"
+                    spellcheck="false"
+                    autocomplete="off"
+                    placeholder="在已登录的浏览器打开 Session 页 → Ctrl/Cmd+A 全选 → 复制 → 粘贴到这里"
+                ></textarea>
+                <div class="check-field-hint" id="check-field-hint">内容很长、占满整页是正常的</div>
+            </div>
 
             <div class="check-actions">
                 <button type="button" class="btn-primary check-run-btn" id="check-run-btn">开始检测</button>
-                <a
-                    class="btn-secondary btn-sm"
-                    id="check-open-session"
-                    href="https://chatgpt.com/api/auth/session"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >新标签打开 Session</a>
-                <button type="button" class="btn-ghost btn-sm" id="check-copy-link-btn">复制 Session 链接</button>
+                <button type="button" class="btn-secondary check-paste-btn" id="check-paste-btn">从剪贴板粘贴</button>
             </div>
 
             <ol class="check-steps">
-                <li>使用已登录 ChatGPT 的浏览器</li>
-                <li>点击「新标签打开 Session」，或先「复制 Session 链接」再粘贴到地址栏</li>
-                <li>在打开的页面上全选（Ctrl/Cmd + A）并复制完整 JSON</li>
-                <li>粘贴到上方输入框，点击「开始检测」</li>
+                <li><span>1</span>已登录 ChatGPT 的浏览器里打开 Session</li>
+                <li><span>2</span>全选并复制整页 JSON</li>
+                <li><span>3</span>粘贴后点「开始检测」</li>
             </ol>
 
             <p class="check-privacy" id="check-idle-note">
-                说明：本工具只读取订阅相关信息，不会改动你的账号。<strong>Session 仅用于本次检测，服务端不落库</strong>。检测完成后，建议回到 Session 页面刷新；刷新后刚才粘贴的 Token 会失效，更加安全。
+                只读订阅信息，不改动账号；Session 仅用于本次检测、不落库。查完建议回 Session 页刷新，刚贴的这份会失效。
             </p>
         </section>
 
@@ -98,9 +105,9 @@
             </div>
         </section>
 
-        <section class="customer-service">
+        <section class="customer-service check-cs">
             <h2>检测结果拿不准？</h2>
-            <p class="cs-subtitle">说明账号情况或发送检测结论，转人工确认是否可充</p>
+            <p class="cs-subtitle">把账号情况或检测结论发给客服，帮你确认能不能充</p>
             <div class="service-info">
                 <div class="service-item">
                     <span class="service-label">客服QQ：</span>
