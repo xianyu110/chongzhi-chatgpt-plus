@@ -152,9 +152,9 @@ def nav_html(code: str, page: str, t: dict, active: str, cta_href: str, cta_labe
                         <a href="{p('support/')}" class="nav-dropdown-item{support_active}" role="menuitem">{t['nav_support']}</a>
                     </div>
                 </div>
-{lang_switcher(code, page)}
             </div>
             <a href="{cta_href}" class="navbar-cta"{' target="_blank" rel="noopener noreferrer"' if cta_href.startswith('http') else ''}>{cta_label}</a>
+{lang_switcher(code, page)}
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="{t.get('menu', 'Menu')}">
                 <span></span><span></span><span></span>
             </button>

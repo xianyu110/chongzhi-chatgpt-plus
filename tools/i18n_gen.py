@@ -76,21 +76,18 @@ def patch_zh_pages():
         if n:
             text = text2
         elif 'nav-lang' not in text:
-            # Insert before closing </div> of navbar-links — after last help dropdown
-            # Find the help dropdown end then insert
-            marker = None
-            # Prefer insert before </div>\n            <a href=...navbar-cta
+            # Insert language switcher AFTER navbar-cta (right side of header)
             m = re.search(
-                r'(</div>\s*</div>\s*)(<a href="[^"]*" class="navbar-cta")',
+                r'(<a\b[^>]*\bclass="navbar-cta"[^>]*>.*?</a>\n)',
                 text,
+                re.S,
             )
             if m:
-                text = text[: m.start()] + m.group(1) + switcher + "\n            " + m.group(2) + text[m.end() :]
+                text = text[: m.end()] + switcher + "\n" + text[m.end() :]
             else:
-                # fallback: before mobile-menu or navbar-cta
-                m2 = re.search(r'(\s*)(<a href="[^"]*" class="navbar-cta")', text)
+                m2 = re.search(r'(<button class="mobile-menu-btn")', text)
                 if m2:
-                    text = text[: m2.start()] + "\n" + switcher + "\n" + m2.group(0) + text[m2.end() :]
+                    text = text[: m2.start()] + switcher + "\n            " + text[m2.start() :]
                 else:
                     print(f"WARN: could not insert switcher into {path}")
         path.write_text(text, encoding="utf-8")

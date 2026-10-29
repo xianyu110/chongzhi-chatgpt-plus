@@ -16,6 +16,40 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* ========== Content links: no browser blue / visited purple ========== */
+p a,
+li a,
+.service-note a,
+.faq-answer a,
+dd a,
+td a {
+    color: #17201A;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgba(23, 32, 26, 0.28);
+    text-underline-offset: 0.15em;
+}
+
+p a:visited,
+li a:visited,
+.service-note a:visited,
+.faq-answer a:visited,
+dd a:visited,
+td a:visited {
+    color: #17201A;
+}
+
+p a:hover,
+li a:hover,
+.service-note a:hover,
+.faq-answer a:hover,
+dd a:hover,
+td a:hover {
+    color: #0B1210;
+    text-decoration-color: rgba(23, 32, 26, 0.55);
+}
+
+
 /* ========== Navbar ========== */
 .navbar {
     position: sticky;
@@ -972,14 +1006,18 @@ body {
     text-align: center;
 }
 
-.video-fallback a {
+.video-fallback a,
+.video-fallback a:visited {
     color: #17201A;
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: rgba(23, 32, 26, 0.28);
+    text-underline-offset: 0.15em;
 }
 
 .video-fallback a:hover {
-    text-decoration: underline;
+    color: #0B1210;
+    text-decoration-color: rgba(23, 32, 26, 0.55);
 }
 
 /* ========== FAQ Section ========== */
@@ -2029,14 +2067,18 @@ body {
     color: #17201A;
 }
 
-.inline-qq {
+.inline-qq,
+.inline-qq:visited {
     color: #17201A;
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: rgba(23, 32, 26, 0.28);
+    text-underline-offset: 0.15em;
 }
 
 .inline-qq:hover {
-    text-decoration: underline;
+    color: #0B1210;
+    text-decoration-color: rgba(23, 32, 26, 0.55);
 }
 
 .plain-list {
@@ -3060,16 +3102,17 @@ body {
     background: #94A3B8;
 }
 
-.policy-list a {
-    color: #0F766E;
+.policy-list a,
+.policy-list a:visited {
+    color: #17201A;
     font-weight: 600;
     text-decoration: none;
-    border-bottom: 1px solid rgba(15, 118, 110, 0.25);
+    border-bottom: 1px solid rgba(23, 32, 26, 0.28);
 }
 
 .policy-list a:hover {
-    color: #115E59;
-    border-bottom-color: #115E59;
+    color: #0B1210;
+    border-bottom-color: rgba(23, 32, 26, 0.55);
 }
 
 .pay-process-strip {
@@ -3759,10 +3802,26 @@ body {
     margin-top: 4px;
 }
 
-/* Language switcher (compact dropdown) */
+/* Language switcher — sits right of CTA (outside nav pill) */
+.navbar-container > .nav-lang {
+    flex-shrink: 0;
+    margin-left: 4px;
+}
 .nav-lang .nav-dropdown-toggle {
     min-width: auto;
     white-space: nowrap;
+    color: #64748b;
+    font-weight: 500;
+    font-size: 0.88rem;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #F1F3F2;
+    border: none;
+    cursor: pointer;
+}
+.nav-lang .nav-dropdown-toggle:hover {
+    color: #17201A;
+    background: #E8EAE9;
 }
 .nav-lang .nav-dropdown-menu {
     min-width: 9.5rem;
@@ -3772,9 +3831,11 @@ body {
 .nav-lang .nav-dropdown-item.active {
     font-weight: 600;
 }
-@media (max-width: 900px) {
-    .nav-lang .nav-dropdown-menu {
-        right: auto;
-        left: 0;
+@media (max-width: 768px) {
+    /* Keep language switcher visible next to hamburger when links/CTA hide */
+    .navbar-container > .nav-lang {
+        display: block;
+        margin-left: auto;
+        margin-right: 8px;
     }
 }
