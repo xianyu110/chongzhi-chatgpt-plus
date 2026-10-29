@@ -1359,6 +1359,176 @@ body {
     color: #94a3b8;
 }
 
+/* ========== SMS / 接码 horizontal card ========== */
+.sms-card {
+    max-width: 1040px;
+    margin: 20px auto 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr) auto;
+    gap: 20px 28px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 22px;
+    padding: 24px 28px;
+    border: 1px solid #eef2ff;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.sms-card:hover {
+    transform: translateY(-4px);
+    border-color: #c7d2fe;
+    box-shadow: 0 20px 48px rgba(99, 102, 241, 0.14);
+}
+
+.sms-card-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: 0;
+}
+
+.sms-card-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4f46e5;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+    border: 1px solid #e0e7ff;
+}
+
+.sms-card-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.sms-card-copy h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 8px;
+}
+
+.sms-card-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #047857;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    margin-bottom: 8px;
+}
+
+.sms-card-desc {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.sms-card-desc a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sms-card-desc a:hover {
+    text-decoration: underline;
+}
+
+.sms-card-sample {
+    min-width: 0;
+}
+
+.sms-bubble {
+    background: linear-gradient(135deg, #f8fafc, #eef2ff);
+    border: 1px solid #e0e7ff;
+    border-radius: 14px;
+    padding: 14px 16px;
+}
+
+.sms-bubble-from {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+.sms-bubble-body {
+    font-size: 0.9rem;
+    color: #1e293b;
+}
+
+.sms-bubble-body strong {
+    color: #4f46e5;
+    letter-spacing: 0.04em;
+}
+
+.sms-card-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.sms-card-price {
+    line-height: 1;
+}
+
+.sms-card-price .price-currency {
+    font-size: 1.15rem;
+}
+
+.sms-card-price .price-amount {
+    font-size: 1.85rem;
+}
+
+.sms-card-price-hint {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin: 0 0 4px;
+    text-align: right;
+}
+
+.sms-card-action .btn-primary {
+    white-space: nowrap;
+    padding: 12px 22px;
+}
+
+@media (max-width: 900px) {
+    .sms-card {
+        grid-template-columns: 1fr;
+        padding: 22px;
+    }
+
+    .sms-card-action {
+        align-items: stretch;
+    }
+
+    .sms-card-price-hint {
+        text-align: left;
+    }
+
+    .sms-card-action .btn-primary {
+        text-align: center;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .sms-card-left {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
 /* ========== Capabilities Section ========== */
 .capabilities-section {
     margin-bottom: 80px;
