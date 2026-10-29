@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка аккаунта ChatGPT | GPTPro</title>
+    <meta name="description" content="Вставьте JSON chatgpt.com/api/auth/session, чтобы увидеть план и возможность открыть/продлить Plus. Только чтение; сессия не сохраняется.">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <meta name="theme-color" content="#17201A">
+    <meta property="og:image" content="https://chongzhi.chatgpt-plus.top/assets/icons/og-icon.png">
+    <link rel="alternate" hreflang="zh-CN" href="https://chongzhi.chatgpt-plus.top/check/">
+    <link rel="alternate" hreflang="en" href="https://chongzhi.chatgpt-plus.top/en/check/">
+    <link rel="alternate" hreflang="zh-TW" href="https://chongzhi.chatgpt-plus.top/zh-tw/check/">
+    <link rel="alternate" hreflang="ja" href="https://chongzhi.chatgpt-plus.top/ja/check/">
+    <link rel="alternate" hreflang="ko" href="https://chongzhi.chatgpt-plus.top/ko/check/">
+    <link rel="alternate" hreflang="es" href="https://chongzhi.chatgpt-plus.top/es/check/">
+    <link rel="alternate" hreflang="ru" href="https://chongzhi.chatgpt-plus.top/ru/check/">
+    <link rel="alternate" hreflang="x-default" href="https://chongzhi.chatgpt-plus.top/check/">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/ru/" class="navbar-logo">
+                <span class="logo-icon">G</span>
+                <span class="logo-text">GPTPro<span class="logo-sub">Проверка аккаунта ChatGPT</span></span>
+            </a>
+            <div class="navbar-links">
+                <a href="/ru/" class="nav-tab"><img class="nav-ai-icon" src="/assets/icons/openai-mark.svg?v=4" width="16" height="16" alt="" aria-hidden="true">ChatGPT Plus</a>
+                <a href="/ru/gemini/" class="nav-tab"><img class="nav-ai-icon" src="/assets/icons/gemini-mark.svg?v=1" width="16" height="16" alt="" aria-hidden="true">Gemini</a>
+                <a href="/ru/grok/" class="nav-tab"><img class="nav-ai-icon" src="/assets/icons/grok-mark.svg?v=1" width="16" height="16" alt="" aria-hidden="true">Grok</a>
+                <a href="/ru/claude/" class="nav-tab"><img class="nav-ai-icon" src="/assets/icons/claude-mark.svg?v=1" width="16" height="16" alt="" aria-hidden="true">Claude</a>
+                <div class="nav-dropdown">
+                    <button type="button" class="nav-tab nav-dropdown-toggle active" aria-expanded="false" aria-haspopup="true">
+                        Инструменты <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="/ru/check/" class="nav-dropdown-item active" role="menuitem">Проверка аккаунта</a>
+                        <a class="nav-dropdown-item" href="https://codexinstall.asia/zh/codex-reset/" target="_blank" rel="noopener noreferrer" role="menuitem">Радар квоты</a>
+                        <a href="/download-codex/" class="nav-dropdown-item" role="menuitem">Скачать Codex</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <button type="button" class="nav-tab nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Помощь <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="/ru/faq/" class="nav-dropdown-item" role="menuitem">FAQ</a>
+                        <a href="/ru/support/" class="nav-dropdown-item" role="menuitem">Поддержка</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown nav-lang">
+                    <button type="button" class="nav-tab nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Language">
+                        Русский <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="/check/" class="nav-dropdown-item" role="menuitem">简体中文</a>
+                        <a href="/en/check/" class="nav-dropdown-item" role="menuitem">English</a>
+                        <a href="/zh-tw/check/" class="nav-dropdown-item" role="menuitem">繁體中文</a>
+                        <a href="/ja/check/" class="nav-dropdown-item" role="menuitem">日本語</a>
+                        <a href="/ko/check/" class="nav-dropdown-item" role="menuitem">한국어</a>
+                        <a href="/es/check/" class="nav-dropdown-item" role="menuitem">Español</a>
+                        <a href="/ru/check/" class="nav-dropdown-item active" role="menuitem">Русский</a>
+                    </div>
+                </div>
+            </div>
+            <a href="/ru/support/" class="navbar-cta">Связаться с поддержкой</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="check-hero">
+            <div class="hero-badge">Только чтение · сессия не хранится · заказ не нужен</div>
+            <h1 class="hero-title">Можно ли<span class="hero-title-accent">открыть этот аккаунт?</span></h1>
+            <p class="check-hero-sub">Вставьте полный JSON с <code>chatgpt.com/api/auth/session</code> (нужен <strong>accessToken</strong>). За секунды увидите план и можно ли открыть / апгрейд / продлить.</p>
+        </section>
+        <section class="check-panel" id="check-panel">
+            <div class="check-panel-head">
+                <div class="check-source">
+                    <span class="check-source-dot" aria-hidden="true"></span>
+                    <span class="check-source-name">ChatGPT Session</span>
+                    <span class="check-status-pill" id="check-status-pill">Ждём вставку</span>
+                </div>
+                <div class="check-helpers">
+                    <a class="check-helper-link" id="check-open-session" href="https://chatgpt.com/api/auth/session" target="_blank" rel="noopener noreferrer">Открыть Session</a>
+                    <button type="button" class="check-helper-btn" id="check-copy-link-btn">Копировать ссылку</button>
+                </div>
+            </div>
+            <label class="check-label" for="check-session-input">Вставить Session JSON</label>
+            <div class="check-field">
+                <textarea id="check-session-input" class="check-textarea" rows="9" spellcheck="false" autocomplete="off" placeholder="Откройте Session в браузере с входом → Ctrl/Cmd+A → копировать → вставить сюда"></textarea>
+                <div class="check-field-hint" id="check-field-hint">Длинный текст на всю страницу — это нормально</div>
+            </div>
+            <div class="check-actions">
+                <button type="button" class="btn-primary check-run-btn" id="check-run-btn">Начать проверку</button>
+                <button type="button" class="btn-secondary check-paste-btn" id="check-paste-btn">Вставить из буфера</button>
+            </div>
+            <ol class="check-steps">
+                <li><span>1</span>Откройте Session в браузере, где вы вошли в ChatGPT</li>
+                <li><span>2</span>Выделите и скопируйте весь JSON</li>
+                <li><span>3</span>Вставьте и нажмите «Начать проверку»</li>
+            </ol>
+            <p class="check-privacy" id="check-idle-note">Только чтение подписки; сессия используется только для этой проверки и не сохраняется. После проверки обновите страницу Session.</p>
+        </section>
+        <section class="check-result" id="check-result" hidden>
+            <div class="check-result-card" id="check-result-card">
+                <div class="check-result-top">
+                    <span class="check-verdict-pill" id="check-verdict-pill">—</span>
+                    <span class="check-checked-at" id="check-checked-at"></span>
+                </div>
+                <h2 class="check-verdict-title" id="check-verdict-title">Ожидание проверки</h2>
+                <p class="check-verdict-msg" id="check-verdict-msg"></p>
+                <dl class="check-meta" id="check-meta"></dl>
+                <div class="check-cta" id="check-cta">
+                    <button type="button" class="check-again" id="check-again-btn">Проверить другой аккаунт</button>
+                    <a class="btn-primary" href="/ru/#pricing" id="check-pricing-btn" hidden>Смотреть цены пополнения</a>
+                    <a class="btn-secondary" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer" id="check-qq-btn" hidden>QQ поддержка 1002569303</a>
+                </div>
+            </div>
+        </section>
+        <section class="customer-service check-cs">
+            <h2>Неясен результат?</h2>
+            <p class="cs-subtitle">Отправьте статус или вердикт в поддержку, чтобы подтвердить возможность</p>
+            <div class="service-info">
+                <div class="service-item">
+                    <span class="service-label">QQ поддержки:</span>
+                    <span class="service-value">1002569303</span>
+                </div>
+                <div class="service-note">
+                    <p><a class="inline-qq" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">Открыть чат QQ</a> (или добавьте QQ 1002569303)</p>
+                    <p>Или откройте <a href="/ru/support/">Центр поддержки</a> для частых вопросов.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">G</span>
+                        <span>GPTPro</span>
+                    </div>
+                    <p>Безопасное и быстрое пополнение ИИ и аккаунтов</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Услуги</h4>
+                        <a href="/ru/">Пополнение ChatGPT Plus / GPT Pro</a>
+                        <a href="/ru/gemini/">Аккаунты и пополнение Gemini</a>
+                        <a href="/ru/grok/">Пополнение SuperGrok</a>
+                        <a href="/ru/claude/">Пополнение Claude</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Инструменты и помощь</h4>
+                        <a href="/ru/check/">Проверка аккаунта</a>
+                        <a href="https://codexinstall.asia/zh/codex-reset/" target="_blank" rel="noopener noreferrer">Радар сброса квоты</a>
+                        <a href="/download-codex/">Гайд по скачиванию Codex</a>
+                        <a href="/ru/faq/">FAQ</a>
+                        <a href="/ru/support/">Центр поддержки</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Контакты</h4>
+                        <p>QQ: 1002569303</p>
+                        <p>Онлайн 9:00 – 04:00 (след. день)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024-2026 GPTPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/script.js"></script>
+    <script src="/js/check.js"></script>
+</body>
+</html>

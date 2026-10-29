@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chongzhi.chatgpt-plus.top/sitemap.xml

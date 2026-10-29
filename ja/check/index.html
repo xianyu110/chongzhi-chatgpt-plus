@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT アカウント確認 | GPTPro</title>
+    <meta name="description" content="chatgpt.com/api/auth/session の JSON を貼り付け、プランと Plus 開通／更新可否を確認。読み取り専用、Session は保存しません。">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <meta name="theme-color" content="#17201A">
+    <meta property="og:image" content="https://chongzhi.chatgpt-plus.top/assets/icons/og-icon.png">
+    <link rel="alternate" hreflang="zh-CN" href="https://chongzhi.chatgpt-plus.top/check/">
+    <link rel="alternate" hreflang="en" href="https://chongzhi.chatgpt-plus.top/en/check/">
+    <link rel="alternate" hreflang="zh-TW" href="https://chongzhi.chatgpt-plus.top/zh-tw/check/">
+    <link rel="alternate" hreflang="ja" href="https://chongzhi.chatgpt-plus.top/ja/check/">
+    <link rel="alternate" hreflang="ko" href="https://chongzhi.chatgpt-plus.top/ko/check/">
+    <link rel="alternate" hreflang="es" href="https://chongzhi.chatgpt-plus.top/es/check/">
+    <link rel="alternate" hreflang="ru" href="https://chongzhi.chatgpt-plus.top/ru/check/">
+    <link rel="alternate" hreflang="x-default" href="https://chongzhi.chatgpt-plus.top/check/">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/ja/" class="navbar-logo">
+                <span class="logo-icon">G</span>
+                <span class="logo-text">GPTPro<span class="logo-sub">ChatGPT アカウント確認</span></span>
+            </a>
+            <div class="navbar-links">
+                <a href="/ja/" class="nav-tab"><img class="nav-ai-icon" src="/assets/icons/openai-mark.svg?v=4" width="16" height="16" alt="" aria-hidden="true">ChatGPT Plus</a>
+                <a href="/ja/gemini/" class="nav-tab"><img class="nav-ai-icon" src="/assets/icons/gemini-mark.svg?v=1" width="16" height="16" alt="" aria-hidden="true">Gemini</a>
+                <a href="/ja/grok/" class="nav-tab"><img class="nav-ai-icon" src="/assets/icons/grok-mark.svg?v=1" width="16" height="16" alt="" aria-hidden="true">Grok</a>
+                <a href="/ja/claude/" class="nav-tab"><img class="nav-ai-icon" src="/assets/icons/claude-mark.svg?v=1" width="16" height="16" alt="" aria-hidden="true">Claude</a>
+                <div class="nav-dropdown">
+                    <button type="button" class="nav-tab nav-dropdown-toggle active" aria-expanded="false" aria-haspopup="true">
+                        ツール <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="/ja/check/" class="nav-dropdown-item active" role="menuitem">アカウント確認</a>
+                        <a class="nav-dropdown-item" href="https://codexinstall.asia/zh/codex-reset/" target="_blank" rel="noopener noreferrer" role="menuitem">クォータレーダー</a>
+                        <a href="/download-codex/" class="nav-dropdown-item" role="menuitem">Codexダウンロード</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <button type="button" class="nav-tab nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        ヘルプ <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="/ja/faq/" class="nav-dropdown-item" role="menuitem">よくある質問</a>
+                        <a href="/ja/support/" class="nav-dropdown-item" role="menuitem">サポート</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown nav-lang">
+                    <button type="button" class="nav-tab nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Language">
+                        日本語 <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="/check/" class="nav-dropdown-item" role="menuitem">简体中文</a>
+                        <a href="/en/check/" class="nav-dropdown-item" role="menuitem">English</a>
+                        <a href="/zh-tw/check/" class="nav-dropdown-item" role="menuitem">繁體中文</a>
+                        <a href="/ja/check/" class="nav-dropdown-item active" role="menuitem">日本語</a>
+                        <a href="/ko/check/" class="nav-dropdown-item" role="menuitem">한국어</a>
+                        <a href="/es/check/" class="nav-dropdown-item" role="menuitem">Español</a>
+                        <a href="/ru/check/" class="nav-dropdown-item" role="menuitem">Русский</a>
+                    </div>
+                </div>
+            </div>
+            <a href="/ja/support/" class="navbar-cta">サポートに連絡</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="check-hero">
+            <div class="hero-badge">読み取り専用 · Session 非保存 · 注文不要</div>
+            <h1 class="hero-title">このアカウントは<span class="hero-title-accent">開けますか？</span></h1>
+            <p class="check-hero-sub"><code>chatgpt.com/api/auth/session</code> の全文 JSON（<strong>accessToken</strong> 必須）を貼り付け。数秒でプランと開通／アップグレード／更新可否が分かります。</p>
+        </section>
+        <section class="check-panel" id="check-panel">
+            <div class="check-panel-head">
+                <div class="check-source">
+                    <span class="check-source-dot" aria-hidden="true"></span>
+                    <span class="check-source-name">ChatGPT Session</span>
+                    <span class="check-status-pill" id="check-status-pill">貼り付け待ち</span>
+                </div>
+                <div class="check-helpers">
+                    <a class="check-helper-link" id="check-open-session" href="https://chatgpt.com/api/auth/session" target="_blank" rel="noopener noreferrer">Session を開く</a>
+                    <button type="button" class="check-helper-btn" id="check-copy-link-btn">リンクをコピー</button>
+                </div>
+            </div>
+            <label class="check-label" for="check-session-input">Session JSON を貼り付け</label>
+            <div class="check-field">
+                <textarea id="check-session-input" class="check-textarea" rows="9" spellcheck="false" autocomplete="off" placeholder="ログイン済みブラウザで Session を開く → Ctrl/Cmd+A → コピー → ここに貼り付け"></textarea>
+                <div class="check-field-hint" id="check-field-hint">全文が長いのは正常です</div>
+            </div>
+            <div class="check-actions">
+                <button type="button" class="btn-primary check-run-btn" id="check-run-btn">確認開始</button>
+                <button type="button" class="btn-secondary check-paste-btn" id="check-paste-btn">クリップボードから貼り付け</button>
+            </div>
+            <ol class="check-steps">
+                <li><span>1</span>ChatGPT にログインしたブラウザで Session を開く</li>
+                <li><span>2</span>全文 JSON を全選択してコピー</li>
+                <li><span>3</span>貼り付けて「確認開始」をクリック</li>
+            </ol>
+            <p class="check-privacy" id="check-idle-note">購読情報の読み取りのみ。Session は今回の確認のみに使用し保存しません。確認後は Session ページを更新してください。</p>
+        </section>
+        <section class="check-result" id="check-result" hidden>
+            <div class="check-result-card" id="check-result-card">
+                <div class="check-result-top">
+                    <span class="check-verdict-pill" id="check-verdict-pill">—</span>
+                    <span class="check-checked-at" id="check-checked-at"></span>
+                </div>
+                <h2 class="check-verdict-title" id="check-verdict-title">確認待ち</h2>
+                <p class="check-verdict-msg" id="check-verdict-msg"></p>
+                <dl class="check-meta" id="check-meta"></dl>
+                <div class="check-cta" id="check-cta">
+                    <button type="button" class="check-again" id="check-again-btn">別のアカウントを確認</button>
+                    <a class="btn-primary" href="/ja/#pricing" id="check-pricing-btn" hidden>チャージ価格を見る</a>
+                    <a class="btn-secondary" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer" id="check-qq-btn" hidden>QQ サポート 1002569303</a>
+                </div>
+            </div>
+        </section>
+        <section class="customer-service check-cs">
+            <h2>結果が分かりにくい？</h2>
+            <p class="cs-subtitle">アカウント状況や判定をサポートに送り、可否を確認できます</p>
+            <div class="service-info">
+                <div class="service-item">
+                    <span class="service-label">サポートQQ：</span>
+                    <span class="service-value">1002569303</span>
+                </div>
+                <div class="service-note">
+                    <p><a class="inline-qq" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">QQ チャットを開く</a> （または QQ 1002569303 を追加）</p>
+                    <p>または <a href="/ja/support/">サポートセンター</a> で FAQ を確認。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">G</span>
+                        <span>GPTPro</span>
+                    </div>
+                    <p>安全で高速な AI チャージ・アカウントサービス</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>サービス</h4>
+                        <a href="/ja/">ChatGPT Plus / GPT Pro チャージ</a>
+                        <a href="/ja/gemini/">Gemini アカウント＆チャージ</a>
+                        <a href="/ja/grok/">SuperGrok チャージ</a>
+                        <a href="/ja/claude/">Claude チャージ</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>ツール＆ヘルプ</h4>
+                        <a href="/ja/check/">アカウント確認</a>
+                        <a href="https://codexinstall.asia/zh/codex-reset/" target="_blank" rel="noopener noreferrer">クォータリセットレーダー</a>
+                        <a href="/download-codex/">Codex ダウンロード案内</a>
+                        <a href="/ja/faq/">よくある質問</a>
+                        <a href="/ja/support/">サポートセンター</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>お問い合わせ</h4>
+                        <p>QQ: 1002569303</p>
+                        <p>対応時間 9:00〜翌4:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024-2026 GPTPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/script.js"></script>
+    <script src="/js/check.js"></script>
+</body>
+</html>

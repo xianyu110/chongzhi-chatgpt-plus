@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT 帳號檢測 | GPTPro代儲</title>
+    <meta name="description" content="貼上 chatgpt.com/api/auth/session 完整 JSON，查看套餐與是否可開通 Plus / 升級續費。只讀檢測，不儲存 Session。">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <meta name="theme-color" content="#17201A">
+    <meta property="og:image" content="https://chongzhi.chatgpt-plus.top/assets/icons/og-icon.png">
+    <link rel="alternate" hreflang="zh-CN" href="https://chongzhi.chatgpt-plus.top/check/">
+    <link rel="alternate" hreflang="en" href="https://chongzhi.chatgpt-plus.top/en/check/">
+    <link rel="alternate" hreflang="zh-TW" href="https://chongzhi.chatgpt-plus.top/zh-tw/check/">
+    <link rel="alternate" hreflang="ja" href="https://chongzhi.chatgpt-plus.top/ja/check/">
+    <link rel="alternate" hreflang="ko" href="https://chongzhi.chatgpt-plus.top/ko/check/">
+    <link rel="alternate" hreflang="es" href="https://chongzhi.chatgpt-plus.top/es/check/">
+    <link rel="alternate" hreflang="ru" href="https://chongzhi.chatgpt-plus.top/ru/check/">
+    <link rel="alternate" hreflang="x-default" href="https://chongzhi.chatgpt-plus.top/check/">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/zh-tw/" class="navbar-logo">
+                <span class="logo-icon">G</span>
+                <span class="logo-text">GPTPro代儲<span class="logo-sub">ChatGPT 帳號檢測</span></span>
+            </a>
+            <div class="navbar-links">
+                <a href="/zh-tw/" class="nav-tab"><img class="nav-ai-icon" src="/assets/icons/openai-mark.svg?v=4" width="16" height="16" alt="" aria-hidden="true">ChatGPT Plus</a>
+                <a href="/zh-tw/gemini/" class="nav-tab"><img class="nav-ai-icon" src="/assets/icons/gemini-mark.svg?v=1" width="16" height="16" alt="" aria-hidden="true">Gemini</a>
+                <a href="/zh-tw/grok/" class="nav-tab"><img class="nav-ai-icon" src="/assets/icons/grok-mark.svg?v=1" width="16" height="16" alt="" aria-hidden="true">Grok</a>
+                <a href="/zh-tw/claude/" class="nav-tab"><img class="nav-ai-icon" src="/assets/icons/claude-mark.svg?v=1" width="16" height="16" alt="" aria-hidden="true">Claude</a>
+                <div class="nav-dropdown">
+                    <button type="button" class="nav-tab nav-dropdown-toggle active" aria-expanded="false" aria-haspopup="true">
+                        工具 <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="/zh-tw/check/" class="nav-dropdown-item active" role="menuitem">檢測</a>
+                        <a class="nav-dropdown-item" href="https://codexinstall.asia/zh/codex-reset/" target="_blank" rel="noopener noreferrer" role="menuitem">雷達</a>
+                        <a href="/download-codex/" class="nav-dropdown-item" role="menuitem">Codex下載</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <button type="button" class="nav-tab nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        幫助 <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="/zh-tw/faq/" class="nav-dropdown-item" role="menuitem">常見問題</a>
+                        <a href="/zh-tw/support/" class="nav-dropdown-item" role="menuitem">客服</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown nav-lang">
+                    <button type="button" class="nav-tab nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Language">
+                        繁體中文 <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="/check/" class="nav-dropdown-item" role="menuitem">简体中文</a>
+                        <a href="/en/check/" class="nav-dropdown-item" role="menuitem">English</a>
+                        <a href="/zh-tw/check/" class="nav-dropdown-item active" role="menuitem">繁體中文</a>
+                        <a href="/ja/check/" class="nav-dropdown-item" role="menuitem">日本語</a>
+                        <a href="/ko/check/" class="nav-dropdown-item" role="menuitem">한국어</a>
+                        <a href="/es/check/" class="nav-dropdown-item" role="menuitem">Español</a>
+                        <a href="/ru/check/" class="nav-dropdown-item" role="menuitem">Русский</a>
+                    </div>
+                </div>
+            </div>
+            <a href="/zh-tw/support/" class="navbar-cta">聯絡客服</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="選單">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="check-hero">
+            <div class="hero-badge">只讀 · 不存 Session · 不用下單</div>
+            <h1 class="hero-title">這個號<span class="hero-title-accent">能不能開？</span></h1>
+            <p class="check-hero-sub">貼上 <code>chatgpt.com/api/auth/session</code> 整頁 JSON（須含 <strong>accessToken</strong>），幾秒看清套餐，以及能不能開通 / 升級續費。</p>
+        </section>
+        <section class="check-panel" id="check-panel">
+            <div class="check-panel-head">
+                <div class="check-source">
+                    <span class="check-source-dot" aria-hidden="true"></span>
+                    <span class="check-source-name">ChatGPT Session</span>
+                    <span class="check-status-pill" id="check-status-pill">等待貼上</span>
+                </div>
+                <div class="check-helpers">
+                    <a class="check-helper-link" id="check-open-session" href="https://chatgpt.com/api/auth/session" target="_blank" rel="noopener noreferrer">打開 Session</a>
+                    <button type="button" class="check-helper-btn" id="check-copy-link-btn">複製連結</button>
+                </div>
+            </div>
+            <label class="check-label" for="check-session-input">貼上 Session JSON</label>
+            <div class="check-field">
+                <textarea id="check-session-input" class="check-textarea" rows="9" spellcheck="false" autocomplete="off" placeholder="在已登入的瀏覽器打開 Session 頁 → Ctrl/Cmd+A 全選 → 複製 → 貼到這裡"></textarea>
+                <div class="check-field-hint" id="check-field-hint">內容很長、佔滿整頁是正常的</div>
+            </div>
+            <div class="check-actions">
+                <button type="button" class="btn-primary check-run-btn" id="check-run-btn">開始檢測</button>
+                <button type="button" class="btn-secondary check-paste-btn" id="check-paste-btn">從剪貼簿貼上</button>
+            </div>
+            <ol class="check-steps">
+                <li><span>1</span>已登入 ChatGPT 的瀏覽器裡打開 Session</li>
+                <li><span>2</span>全選並複製整頁 JSON</li>
+                <li><span>3</span>貼上後點「開始檢測」</li>
+            </ol>
+            <p class="check-privacy" id="check-idle-note">只讀訂閱資訊，不改動帳號；Session 僅用於本次檢測、不落庫。查完建議回 Session 頁重新整理，剛貼的這份會失效。</p>
+        </section>
+        <section class="check-result" id="check-result" hidden>
+            <div class="check-result-card" id="check-result-card">
+                <div class="check-result-top">
+                    <span class="check-verdict-pill" id="check-verdict-pill">—</span>
+                    <span class="check-checked-at" id="check-checked-at"></span>
+                </div>
+                <h2 class="check-verdict-title" id="check-verdict-title">等待檢測</h2>
+                <p class="check-verdict-msg" id="check-verdict-msg"></p>
+                <dl class="check-meta" id="check-meta"></dl>
+                <div class="check-cta" id="check-cta">
+                    <button type="button" class="check-again" id="check-again-btn">檢測另一個號</button>
+                    <a class="btn-primary" href="/zh-tw/#pricing" id="check-pricing-btn" hidden>查看代儲價格</a>
+                    <a class="btn-secondary" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer" id="check-qq-btn" hidden>QQ 客服 1002569303</a>
+                </div>
+            </div>
+        </section>
+        <section class="customer-service check-cs">
+            <h2>檢測結果拿不準？</h2>
+            <p class="cs-subtitle">把帳號情況或檢測結論發給客服，幫你確認能不能充</p>
+            <div class="service-info">
+                <div class="service-item">
+                    <span class="service-label">客服QQ：</span>
+                    <span class="service-value">1002569303</span>
+                </div>
+                <div class="service-note">
+                    <p><a class="inline-qq" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1002569303&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">點此打開 QQ 會話</a> （或添加 QQ 1002569303）</p>
+                    <p>也可前往 <a href="/zh-tw/support/">客服中心</a> 查看常見問答。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">G</span>
+                        <span>GPTPro代儲</span>
+                    </div>
+                    <p>提供安全、極速的 AI 儲值與帳號服務</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>服務</h4>
+                        <a href="/zh-tw/">ChatGPT Plus / GPT Pro 代儲</a>
+                        <a href="/zh-tw/gemini/">Gemini 帳號 & 儲值</a>
+                        <a href="/zh-tw/grok/">SuperGrok 儲值</a>
+                        <a href="/zh-tw/claude/">Claude 儲值</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>工具與幫助</h4>
+                        <a href="/zh-tw/check/">帳號檢測</a>
+                        <a href="https://codexinstall.asia/zh/codex-reset/" target="_blank" rel="noopener noreferrer">額度重置雷達</a>
+                        <a href="/download-codex/">Codex 下載教學</a>
+                        <a href="/zh-tw/faq/">常見問題</a>
+                        <a href="/zh-tw/support/">客服中心</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>聯絡我們</h4>
+                        <p>QQ: 1002569303</p>
+                        <p>9:00 - 翌日 4:00 在線</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024-2026 GPTPro代儲. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/script.js"></script>
+    <script src="/js/check.js"></script>
+</body>
+</html>
