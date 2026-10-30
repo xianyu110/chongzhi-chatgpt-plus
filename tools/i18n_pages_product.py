@@ -296,7 +296,7 @@ def build_gemini(code: str) -> str:
                     <ul class="pricing-features">
 {f2}
                     </ul>
-                    <a href="https://momoai.czvip.cn/products/m22" target="_blank" rel="noopener noreferrer" class="btn-primary btn-block">{g['c2_btn']}</a>
+                    <a href="https://new.geminiai.asia/list/#/login" target="_blank" rel="noopener noreferrer" class="btn-primary btn-block">{g['c2_btn']}</a>
                 </div>
             </div>
             <div class="pricing-note"><p>{g['note']}</p></div>
