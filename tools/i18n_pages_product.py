@@ -956,10 +956,11 @@ def build_claude(code: str) -> str:
     _, _, html_lang, _ = locale_by_code(code)
     tags = "\n".join(f'                <span class="tag">{x}</span>' for x in g["tags"])
     cards_html = []
-    for c in g["cards"]:
+    for i, c in enumerate(g["cards"]):
         hot = ' hot' if c.get("hot") else ""
         featured = " featured" if c.get("hot") else ""
         feats = "\n".join(f"                        <li>{x}</li>" for x in c["feats"])
+        buy = c.get("buy") or ("https://wzyp.cn/item/9fi3zj" if i == 0 else "https://wzyp.cn/item/ahu0j7")
         cards_html.append(f"""                <div class="pricing-card{featured}">
                     <div class="pricing-badge{hot}">{c['badge']}</div>
                     <div class="pricing-title-row">
@@ -975,7 +976,7 @@ def build_claude(code: str) -> str:
                     <ul class="pricing-features">
 {feats}
                     </ul>
-                    <a href="https://wzyp.cn/item/ahu0j7" target="_blank" rel="noopener noreferrer" class="btn-primary btn-block">{g['cta']}</a>
+                    <a href="{buy}" target="_blank" rel="noopener noreferrer" class="btn-primary btn-block">{g['cta']}</a>
                 </div>""")
     why = "\n".join(
         f"""                <div class="why-us-card">

@@ -28,7 +28,7 @@ python3 -m http.server 8080
 | `/en/` | English home |
 | `/gemini/` | Gemini |
 | `/grok/` | SuperGrok（购买入口主链 `https://wzyp.cn/item/6cegy9`，备用 `https://wzyp.cn/item/yfz403`） |
-| `/claude/` | Claude Mail / Pro / Max（购买入口 `https://wzyp.cn/item/ahu0j7`） |
+| `/claude/` | Claude Mail / Pro / Max（Mail 普号 `https://wzyp.cn/item/9fi3zj`；Pro/Max 仍 `https://wzyp.cn/item/ahu0j7`） |
 | `/faq/` | 常见问题 |
 | `/check/` | ChatGPT 账号检测（Session → 可否开通/升级） |
 | `/radar/` → `https://codexinstall.asia/zh/codex-reset/` | 额度重置雷达（友链跳转） |
