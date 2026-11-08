@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         setupNavDropdowns();
         setupTestimonialsScroll();
         setupFloatingCS();
-        setupChannelSwitch();
     }
 
     function setupEventListeners() {
@@ -219,61 +218,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 panel.classList.remove('open');
                 btn.setAttribute('aria-expanded', 'false');
             }
-        });
-    }
-
-    // Pricing-card channel picker. Official stays the default buy link.
-    // iOS price / href come from data-price and data-href on each option.
-    function setupChannelSwitch() {
-        var groups = document.querySelectorAll('.channel-switch');
-        if (!groups.length) return;
-
-        groups.forEach(function (group) {
-            var card = group.closest('.pricing-card');
-            if (!card) return;
-            var buy = card.querySelector('a.btn-primary');
-            var price = card.querySelector('.price-amount');
-            var buyable = card.querySelector('.buyable-pill');
-            var options = Array.prototype.slice.call(group.querySelectorAll('.channel-option'));
-
-            function apply(btn) {
-                options.forEach(function (other) {
-                    var on = other === btn;
-                    other.classList.toggle('is-active', on);
-                    other.setAttribute('aria-checked', on ? 'true' : 'false');
-                });
-                var href = btn.getAttribute('data-href');
-                var amount = btn.getAttribute('data-price');
-                var stock = btn.getAttribute('data-buyable');
-                if (buy && href) buy.setAttribute('href', href);
-                if (price && amount) price.textContent = amount;
-                if (buyable && stock) buyable.textContent = stock;
-                if (buy) {
-                    var base = (buy.getAttribute('data-buy-label') || buy.textContent || '').trim();
-                    buy.setAttribute('aria-label', base + ' · ' + (btn.textContent || '').trim());
-                }
-            }
-
-            options.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    apply(btn);
-                });
-            });
-
-            group.addEventListener('keydown', function (e) {
-                var keys = ['ArrowRight', 'ArrowDown', 'ArrowLeft', 'ArrowUp'];
-                if (keys.indexOf(e.key) === -1) return;
-                var i = options.indexOf(document.activeElement);
-                if (i < 0) return;
-                e.preventDefault();
-                var forward = e.key === 'ArrowRight' || e.key === 'ArrowDown';
-                var next = forward ? (i + 1) % options.length : (i - 1 + options.length) % options.length;
-                options[next].focus();
-                apply(options[next]);
-            });
-
-            var active = group.querySelector('.channel-option.is-active') || options[0];
-            if (active) apply(active);
         });
     }
 

@@ -48,20 +48,7 @@ SVG_WHYS = [
 ]
 
 
-def _channel_switch(g, href, amount):
-    """Same card, two channel SKUs. iOS href/price mirror official until edited."""
-    buyable = g["buyable"]
-    # iOS 渠道价格与可购买状态暂与本卡官方渠道相同。有独立 SKU 后只改 data-href / data-price。
-    return (
-        "                            <!-- iOS 渠道价格与可购买状态暂与本卡官方渠道相同。有独立 SKU 后只改 iOS 按钮的 data-href / data-price。 -->\n"
-        '                            <div class="channel-switch" role="radiogroup" aria-label="' + g["channel_aria"] + '">\n'
-        '                                <button type="button" class="channel-option is-active" role="radio" aria-checked="true" data-channel="official" data-href="' + href + '" data-price="' + amount + '" data-buyable="' + buyable + '">' + g["channel_official"] + "</button>\n"
-        '                                <button type="button" class="channel-option channel-option-ios" role="radio" aria-checked="false" data-channel="ios" data-href="' + href + '" data-price="' + amount + '" data-buyable="' + buyable + '">' + g["channel_ios"] + "</button>\n"
-        "                            </div>\n"
-    )
-
-
-def _card(name, tier, official, amount, feats, href, g, buy, period, featured=False, accent_tier=False, keep_official_pill=True):
+def _card(name, tier, official, amount, feats, href, g, buy, period, featured=False, accent_tier=False):
     mark = ICON["openai"].replace("?v=4", "?v=3")
     feat_li = "\n".join("                        <li>" + f + "</li>" for f in feats)
     tier_html = ""
@@ -69,9 +56,6 @@ def _card(name, tier, official, amount, feats, href, g, buy, period, featured=Fa
         cls = "product-tier accent" if accent_tier else "product-tier"
         tier_html = ' <span class="' + cls + '">' + tier + "</span>"
     feat_cls = " featured" if featured else ""
-    official_pill = ""
-    if keep_official_pill:
-        official_pill = '                            <span class="official-pill">' + official + "</span>\n"
     return (
         '                <article class="pricing-card' + feat_cls + '">\n'
         '                    <div class="pricing-card-head">\n'
@@ -82,10 +66,9 @@ def _card(name, tier, official, amount, feats, href, g, buy, period, featured=Fa
         "                        </div>\n"
         '                        <div class="product-meta-row">\n'
         "                            <span>" + g["meta_own"] + "</span>\n"
-        + official_pill
-        + '                            <span class="buyable-pill">' + g["buyable"] + "</span>\n"
-        + _channel_switch(g, href, amount)
-        + "                        </div>\n"
+        '                            <span class="official-pill">' + official + "</span>\n"
+        '                            <span class="buyable-pill">' + g["buyable"] + "</span>\n"
+        "                        </div>\n"
         "                    </div>\n"
         '                    <div class="pricing-price">\n'
         '                        <span class="price-currency">&#165;</span>\n'
@@ -116,7 +99,7 @@ def build_home(code):
         _card("ChatGPT Plus", "", g["official20"], "1XX", g["c1_feats"], "https://wzyp.cn/item/bp1jdo", g, buy, period),
         _card("ChatGPT Pro", "5x", g["official100"], "780.00", g["c2_feats"], "https://momoai.czvip.cn/products/m23", g, buy, period),
         _card("ChatGPT Pro", "20x", g["official200"], "1280.00", g["c3_feats"], "https://momoai.czvip.cn/products/m24", g, buy, period, featured=True, accent_tier=True),
-        _card("ChatGPT Pro", "50x", g["official_direct"], "3600.00", g["c4_feats"], "https://momoai.czvip.cn/products/gpt-pro-25x", g, buy, period, keep_official_pill=False),
+        _card("ChatGPT Pro", "50x", g["official_direct"], "3600.00", g["c4_feats"], "https://momoai.czvip.cn/products/gpt-pro-25x", g, buy, period),
     ])
 
     trust = "\n".join(
@@ -210,7 +193,6 @@ def build_home(code):
         "                <h2>" + g["price_h"] + "</h2>\n"
         "                <p>" + g["price_p"] + "</p>\n"
         "            </div>\n"
-        '            <!-- iOS 渠道价格与可购买状态暂与各卡官方渠道相同。有独立 SKU 后只改 data-href / data-price。 -->\n'
         '            <div class="pricing-grid quad">\n'
         + cards + "\n"
         "            </div>\n"
@@ -308,7 +290,7 @@ def build_home(code):
         "        </section>\n"
         "    </div>\n\n"
         + footer_html(code, t) + "\n\n"
-        '    <script src="/script.js?v=ios1"></script>\n'
+        '    <script src="/script.js"></script>\n'
         "</body>\n"
         "</html>\n"
     )

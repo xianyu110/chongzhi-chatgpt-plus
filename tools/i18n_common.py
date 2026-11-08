@@ -95,7 +95,7 @@ def head_common(title: str, desc: str, html_lang: str, page: str, keywords: str 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content="{desc}">{kw}
-    <link rel="stylesheet" href="/style.css?v=ios1">
+    <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">

@@ -54,15 +54,13 @@
     "c4_feats": [
       "Contact support after order",
       "Old and new accounts can renew",
-      "Guaranteed subscription · 30-day support"
+      "Guaranteed subscription · 30-day support",
+      "iOS channel (more stable)"
     ],
     "official20": "Official $20/mo",
     "official100": "Official $100/mo",
     "official200": "Official $200/mo",
     "official_direct": "Official top-up",
-    "channel_aria": "Top-up channel",
-    "channel_official": "Official top-up",
-    "channel_ios": "iOS channel · more stable",
     "after_h": "After-sales",
     "after": [
       "Official top-up; subscription drops refunded by day (jailbreak/ban excluded).",
@@ -218,15 +216,13 @@
     "c4_feats": [
       "下單後聯絡客服儲值",
       "老號新號可續",
-      "質保訂閱 · 30 天售後"
+      "質保訂閱 · 30 天售後",
+      "iOS 渠道（更穩定）"
     ],
     "official20": "官方 $20/月",
     "official100": "官方 $100/月",
     "official200": "官方 $200/月",
     "official_direct": "官方儲值",
-    "channel_aria": "儲值渠道",
-    "channel_official": "官方儲值",
-    "channel_ios": "iOS渠道 · 更穩定",
     "after_h": "售後條款",
     "after": [
       "正規儲值，不會掉訂閱。掉訂閱按天數退賠。破甲被封號除外。",
@@ -382,15 +378,13 @@
     "c4_feats": [
       "注文後サポートへ",
       "新旧アカウント更新可",
-      "購読保証 · 30日サポート"
+      "購読保証 · 30日サポート",
+      "iOSチャネル（より安定）"
     ],
     "official20": "公式 $20/月",
     "official100": "公式 $100/月",
     "official200": "公式 $200/月",
     "official_direct": "公式チャージ",
-    "channel_aria": "チャージ経路",
-    "channel_official": "公式チャージ",
-    "channel_ios": "iOSチャネル · より安定",
     "after_h": "保証",
     "after": [
       "正規チャージ。購読落ちは日割り返金（脱獄・凍結除く）。",
@@ -546,15 +540,13 @@
     "c4_feats": [
       "주문 후 고객지원",
       "신규·기존 갱신 가능",
-      "구독 보증 · 30일 지원"
+      "구독 보증 · 30일 지원",
+      "iOS 채널(더 안정)"
     ],
     "official20": "공식 $20/월",
     "official100": "공식 $100/월",
     "official200": "공식 $200/월",
     "official_direct": "공식 충전",
-    "channel_aria": "충전 채널",
-    "channel_official": "공식 충전",
-    "channel_ios": "iOS 채널 · 더 안정",
     "after_h": "보증",
     "after": [
       "정식 충전. 구독 중단 시 일할 환불(탈옥·정지 제외).",
@@ -710,15 +702,13 @@
     "c4_feats": [
       "Contacta soporte tras pedir",
       "Cuentas viejas y nuevas",
-      "Suscripción garantizada · 30 días"
+      "Suscripción garantizada · 30 días",
+      "Canal iOS (más estable)"
     ],
     "official20": "Oficial $20/mes",
     "official100": "Oficial $100/mes",
     "official200": "Oficial $200/mes",
     "official_direct": "Recarga oficial",
-    "channel_aria": "Canal de recarga",
-    "channel_official": "Recarga oficial",
-    "channel_ios": "Canal iOS · más estable",
     "after_h": "Postventa",
     "after": [
       "Recarga oficial; caídas reembolsadas por día (salvo jailbreak/ban).",
@@ -874,15 +864,13 @@
     "c4_feats": [
       "После заказа — в поддержку",
       "Старые и новые аккаунты",
-      "Гарантия · 30 дней"
+      "Гарантия · 30 дней",
+      "Канал iOS (стабильнее)"
     ],
     "official20": "Офиц. $20/мес",
     "official100": "Офиц. $100/мес",
     "official200": "Офиц. $200/мес",
     "official_direct": "Офиц. пополнение",
-    "channel_aria": "Канал пополнения",
-    "channel_official": "Офиц. пополнение",
-    "channel_ios": "Канал iOS · стабильнее",
     "after_h": "Гарантия",
     "after": [
       "Официальное пополнение; сбои — возврат по дням (кроме джейлбрейка/бана).",
