@@ -60,6 +60,9 @@
     "official100": "Official $100/mo",
     "official200": "Official $200/mo",
     "official_direct": "Official top-up",
+    "channel_aria": "Top-up channel",
+    "channel_official": "Official top-up",
+    "channel_ios": "iOS channel · more stable",
     "after_h": "After-sales",
     "after": [
       "Official top-up; subscription drops refunded by day (jailbreak/ban excluded).",
@@ -221,6 +224,9 @@
     "official100": "官方 $100/月",
     "official200": "官方 $200/月",
     "official_direct": "官方儲值",
+    "channel_aria": "儲值渠道",
+    "channel_official": "官方儲值",
+    "channel_ios": "iOS渠道 · 更穩定",
     "after_h": "售後條款",
     "after": [
       "正規儲值，不會掉訂閱。掉訂閱按天數退賠。破甲被封號除外。",
@@ -382,6 +388,9 @@
     "official100": "公式 $100/月",
     "official200": "公式 $200/月",
     "official_direct": "公式チャージ",
+    "channel_aria": "チャージ経路",
+    "channel_official": "公式チャージ",
+    "channel_ios": "iOSチャネル · より安定",
     "after_h": "保証",
     "after": [
       "正規チャージ。購読落ちは日割り返金（脱獄・凍結除く）。",
@@ -543,6 +552,9 @@
     "official100": "공식 $100/월",
     "official200": "공식 $200/월",
     "official_direct": "공식 충전",
+    "channel_aria": "충전 채널",
+    "channel_official": "공식 충전",
+    "channel_ios": "iOS 채널 · 더 안정",
     "after_h": "보증",
     "after": [
       "정식 충전. 구독 중단 시 일할 환불(탈옥·정지 제외).",
@@ -704,6 +716,9 @@
     "official100": "Oficial $100/mes",
     "official200": "Oficial $200/mes",
     "official_direct": "Recarga oficial",
+    "channel_aria": "Canal de recarga",
+    "channel_official": "Recarga oficial",
+    "channel_ios": "Canal iOS · más estable",
     "after_h": "Postventa",
     "after": [
       "Recarga oficial; caídas reembolsadas por día (salvo jailbreak/ban).",
@@ -865,6 +880,9 @@
     "official100": "Офиц. $100/мес",
     "official200": "Офиц. $200/мес",
     "official_direct": "Офиц. пополнение",
+    "channel_aria": "Канал пополнения",
+    "channel_official": "Офиц. пополнение",
+    "channel_ios": "Канал iOS · стабильнее",
     "after_h": "Гарантия",
     "after": [
       "Официальное пополнение; сбои — возврат по дням (кроме джейлбрейка/бана).",

@@ -6,7 +6,7 @@
     <title>GPTPro – ChatGPT Plus / GPT Pro Top-up & Renewal</title>
     <meta name="description" content="GPTPro offers ChatGPT Plus top-up, GPT Pro direct recharge, monthly renewal and auto top-up. WeChat & Alipay, official iOS channel, 30-day warranty, daily compensation if subscription drops. Invoices available (+1% tax).">
     <meta name="keywords" content="ChatGPT Plus,ChatGPT Plus top-up,GPT Pro,GPT Pro recharge,AI top-up,Alipay,WeChat Pay">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css?v=ios1">
     <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
@@ -122,6 +122,7 @@
                 <h2>Resource hall</h2>
                 <p>4 quotes · Plus auto-delivery · Pro top-up after login</p>
             </div>
+            <!-- iOS 渠道价格与可购买状态暂与各卡官方渠道相同。有独立 SKU 后只改 data-href / data-price。 -->
             <div class="pricing-grid quad">
                 <article class="pricing-card">
                     <div class="pricing-card-head">
@@ -134,6 +135,11 @@
                             <span>1 month · on your account</span>
                             <span class="official-pill">Official $20/mo</span>
                             <span class="buyable-pill">Available</span>
+                            <!-- iOS 渠道价格与可购买状态暂与本卡官方渠道相同。有独立 SKU 后只改 iOS 按钮的 data-href / data-price。 -->
+                            <div class="channel-switch" role="radiogroup" aria-label="Top-up channel">
+                                <button type="button" class="channel-option is-active" role="radio" aria-checked="true" data-channel="official" data-href="https://wzyp.cn/item/bp1jdo" data-price="1XX" data-buyable="Available">Official top-up</button>
+                                <button type="button" class="channel-option channel-option-ios" role="radio" aria-checked="false" data-channel="ios" data-href="https://wzyp.cn/item/bp1jdo" data-price="1XX" data-buyable="Available">iOS channel · more stable</button>
+                            </div>
                         </div>
                     </div>
                     <div class="pricing-price">
@@ -160,6 +166,11 @@
                             <span>1 month · on your account</span>
                             <span class="official-pill">Official $100/mo</span>
                             <span class="buyable-pill">Available</span>
+                            <!-- iOS 渠道价格与可购买状态暂与本卡官方渠道相同。有独立 SKU 后只改 iOS 按钮的 data-href / data-price。 -->
+                            <div class="channel-switch" role="radiogroup" aria-label="Top-up channel">
+                                <button type="button" class="channel-option is-active" role="radio" aria-checked="true" data-channel="official" data-href="https://momoai.czvip.cn/products/m23" data-price="780.00" data-buyable="Available">Official top-up</button>
+                                <button type="button" class="channel-option channel-option-ios" role="radio" aria-checked="false" data-channel="ios" data-href="https://momoai.czvip.cn/products/m23" data-price="780.00" data-buyable="Available">iOS channel · more stable</button>
+                            </div>
                         </div>
                     </div>
                     <div class="pricing-price">
@@ -186,6 +197,11 @@
                             <span>1 month · on your account</span>
                             <span class="official-pill">Official $200/mo</span>
                             <span class="buyable-pill">Available</span>
+                            <!-- iOS 渠道价格与可购买状态暂与本卡官方渠道相同。有独立 SKU 后只改 iOS 按钮的 data-href / data-price。 -->
+                            <div class="channel-switch" role="radiogroup" aria-label="Top-up channel">
+                                <button type="button" class="channel-option is-active" role="radio" aria-checked="true" data-channel="official" data-href="https://momoai.czvip.cn/products/m24" data-price="1280.00" data-buyable="Available">Official top-up</button>
+                                <button type="button" class="channel-option channel-option-ios" role="radio" aria-checked="false" data-channel="ios" data-href="https://momoai.czvip.cn/products/m24" data-price="1280.00" data-buyable="Available">iOS channel · more stable</button>
+                            </div>
                         </div>
                     </div>
                     <div class="pricing-price">
@@ -210,8 +226,12 @@
                         </div>
                         <div class="product-meta-row">
                             <span>1 month · on your account</span>
-                            <span class="official-pill">Official top-up</span>
                             <span class="buyable-pill">Available</span>
+                            <!-- iOS 渠道价格与可购买状态暂与本卡官方渠道相同。有独立 SKU 后只改 iOS 按钮的 data-href / data-price。 -->
+                            <div class="channel-switch" role="radiogroup" aria-label="Top-up channel">
+                                <button type="button" class="channel-option is-active" role="radio" aria-checked="true" data-channel="official" data-href="https://momoai.czvip.cn/products/gpt-pro-25x" data-price="3600.00" data-buyable="Available">Official top-up</button>
+                                <button type="button" class="channel-option channel-option-ios" role="radio" aria-checked="false" data-channel="ios" data-href="https://momoai.czvip.cn/products/gpt-pro-25x" data-price="3600.00" data-buyable="Available">iOS channel · more stable</button>
+                            </div>
                         </div>
                     </div>
                     <div class="pricing-price">
@@ -472,6 +492,6 @@
         </div>
     </footer>
 
-    <script src="/script.js"></script>
+    <script src="/script.js?v=ios1"></script>
 </body>
 </html>

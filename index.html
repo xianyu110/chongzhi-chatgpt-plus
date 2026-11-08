@@ -6,7 +6,7 @@
     <title>GPTPro代充 ChatGPT Plus / GPT Pro 充值、代充、续费服务</title>
     <meta name="description" content="GPTPro代充提供 ChatGPT Plus 代充、GPT Pro 直充、月卡续费与自动充值服务，支持微信和支付宝，正规iOS通道，质保30天，掉订阅按天赔付，GPT Plus累计达到季卡金额可开发票另收1%税点。">
     <meta name="keywords" content="ChatGPT Plus,ChatGPT Plus 代充,ChatGPT Plus 充值,GPT Pro,GPT Pro 直充,ChatGPT Pro 充值,ChatGPT续费,月卡续费,自动充值,正规iOS代充,GPT接码,接码,支付宝支付,微信支付,QQ支付,AI充值服务">
-    <link rel="stylesheet" href="/style.css?v=links1">
+    <link rel="stylesheet" href="/style.css?v=ios1">
     <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
@@ -139,6 +139,12 @@
                 <h2>资源大厅</h2>
                 <p>4 条报价 · Plus 自动发货 · Pro 登录后充值</p>
             </div>
+            <!--
+              充值渠道跟现有套餐卡片走，不另建商品表。
+              每个 .channel-option 是一条渠道：官方充值保持原来的下单链接。
+              iOS 渠道的价格和「可购买」暂与本卡官方渠道相同（仓库里没有单独标价）。
+              有独立 iOS 链接或不同价格时，只改该按钮的 data-href / data-price。
+            -->
             <div class="pricing-grid quad">
                 <article class="pricing-card">
                     <div class="pricing-card-head">
@@ -151,6 +157,10 @@
                             <span>1个月 · 自有账号开通</span>
                             <span class="official-pill">官方 $20/月</span>
                             <span class="buyable-pill">可购买</span>
+                            <div class="channel-switch" role="radiogroup" aria-label="充值渠道">
+                                <button type="button" class="channel-option is-active" role="radio" aria-checked="true" data-channel="official" data-href="https://wzyp.cn/item/bp1jdo" data-price="1XX" data-buyable="可购买">官方充值</button>
+                                <button type="button" class="channel-option channel-option-ios" role="radio" aria-checked="false" data-channel="ios" data-href="https://wzyp.cn/item/bp1jdo" data-price="1XX" data-buyable="可购买">iOS渠道 · 更稳定</button>
+                            </div>
                         </div>
                     </div>
                     <div class="pricing-price">
@@ -178,6 +188,10 @@
                             <span>1个月 · 自有账号开通</span>
                             <span class="official-pill">官方 $100/月</span>
                             <span class="buyable-pill">可购买</span>
+                            <div class="channel-switch" role="radiogroup" aria-label="充值渠道">
+                                <button type="button" class="channel-option is-active" role="radio" aria-checked="true" data-channel="official" data-href="https://momoai.czvip.cn/products/m23" data-price="780.00" data-buyable="可购买">官方充值</button>
+                                <button type="button" class="channel-option channel-option-ios" role="radio" aria-checked="false" data-channel="ios" data-href="https://momoai.czvip.cn/products/m23" data-price="780.00" data-buyable="可购买">iOS渠道 · 更稳定</button>
+                            </div>
                         </div>
                     </div>
                     <div class="pricing-price">
@@ -205,6 +219,10 @@
                             <span>1个月 · 自有账号开通</span>
                             <span class="official-pill">官方 $200/月</span>
                             <span class="buyable-pill">可购买</span>
+                            <div class="channel-switch" role="radiogroup" aria-label="充值渠道">
+                                <button type="button" class="channel-option is-active" role="radio" aria-checked="true" data-channel="official" data-href="https://momoai.czvip.cn/products/m24" data-price="1280.00" data-buyable="可购买">官方充值</button>
+                                <button type="button" class="channel-option channel-option-ios" role="radio" aria-checked="false" data-channel="ios" data-href="https://momoai.czvip.cn/products/m24" data-price="1280.00" data-buyable="可购买">iOS渠道 · 更稳定</button>
+                            </div>
                         </div>
                     </div>
                     <div class="pricing-price">
@@ -230,8 +248,11 @@
                         </div>
                         <div class="product-meta-row">
                             <span>1个月 · 自有账号开通</span>
-                            <span class="official-pill">官方充值</span>
                             <span class="buyable-pill">可购买</span>
+                            <div class="channel-switch" role="radiogroup" aria-label="充值渠道">
+                                <button type="button" class="channel-option is-active" role="radio" aria-checked="true" data-channel="official" data-href="https://momoai.czvip.cn/products/gpt-pro-25x" data-price="3600.00" data-buyable="可购买">官方充值</button>
+                                <button type="button" class="channel-option channel-option-ios" role="radio" aria-checked="false" data-channel="ios" data-href="https://momoai.czvip.cn/products/gpt-pro-25x" data-price="3600.00" data-buyable="可购买">iOS渠道 · 更稳定</button>
+                            </div>
                         </div>
                     </div>
                     <div class="pricing-price">
@@ -817,6 +838,6 @@
         </div>
     </div>
 
-    <script src="/script.js"></script>
+    <script src="/script.js?v=ios1"></script>
 </body>
 </html>
