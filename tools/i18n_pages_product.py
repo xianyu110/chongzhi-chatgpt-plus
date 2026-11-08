@@ -960,7 +960,7 @@ def build_claude(code: str) -> str:
         hot = ' hot' if c.get("hot") else ""
         featured = " featured" if c.get("hot") else ""
         feats = "\n".join(f"                        <li>{x}</li>" for x in c["feats"])
-        buy = c.get("buy") or ("https://wzyp.cn/item/9fi3zj" if i == 0 else "https://wzyp.cn/item/ahu0j7")
+        buy = c.get("buy") or ("https://wzyp.cn/item/oilh2j" if i == 0 else "https://wzyp.cn/item/ahu0j7")
         cards_html.append(f"""                <div class="pricing-card{featured}">
                     <div class="pricing-badge{hot}">{c['badge']}</div>
                     <div class="pricing-title-row">
