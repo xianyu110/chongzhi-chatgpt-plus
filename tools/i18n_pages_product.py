@@ -15,14 +15,19 @@ GEMINI = {
     "hero": "We focus on Gemini ready accounts and top-up. After checkout you get a login-ready account or we top up your existing one—Gemini 3, Gemini Pro, and more multimodal plans.",
     "buy": "Buy now",
     "contact": "Contact support",
-    "tags": ["Gemini 3 ready accounts", "Gemini Pro top-up", "Invoice available", "Support 9:00–04:00", "Near-instant delivery"],
-    "sec_h": "Official account & mirror options",
-    "sec_p": "Official accounts are opened by support; the mirror offers an all-in-one experience",
-    "c1_badge": "Official account",
-    "c1_name": "Gemini Pro", "c1_tier": "18 months",
-    "c1_desc": "Gemini Pro redemption link with Google One 5TB, about 18 months.",
-    "c1_period": "/ 18 months",
-    "c1_feats": ["Gemini Pro redemption link", "Includes Google One 5TB", "About 18 months validity", "After-sales tech support"],
+    "tags": ["Ultra 20x family seat", "New US Gmail", "Invoice available", "Support 9:00–04:00", "Near-instant delivery"],
+    "sec_h": "Family seat, Gmail & mirror options",
+    "sec_p": "Family-group seats and Gmail are auto-delivered after checkout; the mirror offers an all-in-one experience",
+    "c1_badge": "Family group",
+    "c1_name": "Gemini Ultra 20x", "c1_tier": "Shared seat",
+    "c1_desc": "Join a family group for Gemini Ultra 20x, with random Flow credits and a 30-day warranty.",
+    "c1_period": "/ seat",
+    "c1_feats": ["Ultra 20x shared family-group seat", "Random Flow credits", "30-day warranty", "Auto delivery"],
+    "c3_badge": "Inbox",
+    "c3_name": "Google Gmail", "c3_tier": "New US account",
+    "c3_desc": "A newly registered US-region personal Gmail, useful for joining a family group.",
+    "c3_period": "",
+    "c3_feats": ["Newly registered US-region Gmail", "Personal inbox", "Auto delivery", "In stock"],
     "c2_badge": "Popular",
     "c2_name": "Mirror site", "c2_tier": "No VPN needed",
     "c2_desc": "Mirror packs GPT, Claude, Gemini, Grok and more—no official IP/region/payment limits.",
@@ -51,14 +56,19 @@ GEMINI = {
     "hero": "我們專注提供 Gemini 成品帳號和儲值服務。完成下單即可取得可登入帳號，或幫你在現有帳號中儲值，支援 Gemini 3、Gemini Pro 等多模態體驗。",
     "buy": "立即購買",
     "contact": "聯絡客服",
-    "tags": ["支援 Gemini 3 成品帳號", "支援 Gemini Pro 儲值", "支援開票", "客服 9:00 - 翌日 4:00", "秒級到帳"],
-    "sec_h": "官方帳號 & 鏡像站雙方案",
-    "sec_p": "官方帳號由客服人工開通，鏡像站則提供多合一體驗",
-    "c1_badge": "官方帳號",
-    "c1_name": "Gemini Pro", "c1_tier": "18個月",
-    "c1_desc": "Gemini Pro 兌換連結，含 Google One 5TB，約 18 個月時長。",
-    "c1_period": "/ 18個月",
-    "c1_feats": ["Gemini Pro 兌換連結", "含 Google One 5TB", "約 18 個月有效", "售後技術支援"],
+    "tags": ["支援 Ultra 20x 家庭組", "支援美區谷歌郵箱", "支援開票", "客服 9:00 - 翌日 4:00", "秒級到帳"],
+    "sec_h": "家庭組、郵箱與鏡像站",
+    "sec_p": "家庭組席位和郵箱下單後自動發貨，鏡像站提供多合一體驗",
+    "c1_badge": "家庭組",
+    "c1_name": "Gemini Ultra 20x", "c1_tier": "非獨享席位",
+    "c1_desc": "加入家庭組後使用 Gemini Ultra 20x，積分隨機，質保 30 天。",
+    "c1_period": "/ 席位",
+    "c1_feats": ["Ultra 20x 非獨享家庭組席位", "隨機 Flow 積分", "質保 30 天", "自動發貨"],
+    "c3_badge": "郵箱",
+    "c3_name": "谷歌個人郵箱", "c3_tier": "美區全新",
+    "c3_desc": "美區全新註冊的谷歌個人郵箱，適合搭配家庭組席位使用。",
+    "c3_period": "",
+    "c3_feats": ["美區全新註冊", "個人 Gmail", "自動發貨", "庫存充足"],
     "c2_badge": "推薦",
     "c2_name": "鏡像站", "c2_tier": "免翻即用",
     "c2_desc": "鏡像系統整合 GPT、Claude、Gemini、Grok 等模型，免去官網的 IP/地區/支付限制。",
@@ -87,14 +97,19 @@ GEMINI = {
     "hero": "Gemini の完成アカウントとチャージに特化。注文後にログイン可能なアカウント、または既存アカウントへのチャージ。Gemini 3 / Pro など多モーダル対応。",
     "buy": "今すぐ購入",
     "contact": "サポートに連絡",
-    "tags": ["Gemini 3 完成アカウント", "Gemini Pro チャージ", "請求書対応", "サポート 9:00〜翌4:00", "即時納品"],
-    "sec_h": "公式アカウントとミラーの2プラン",
-    "sec_p": "公式はサポートが開通、ミラーはオールインワン体験",
-    "c1_badge": "公式アカウント",
-    "c1_name": "Gemini Pro", "c1_tier": "18ヶ月",
-    "c1_desc": "Gemini Pro 交換リンク、Google One 5TB 付き、約18ヶ月。",
-    "c1_period": "/ 18ヶ月",
-    "c1_feats": ["Gemini Pro 交換リンク", "Google One 5TB 付き", "約18ヶ月有効", "アフターサポート"],
+    "tags": ["Ultra 20x ファミリー席", "米国の新規 Gmail", "請求書対応", "サポート 9:00〜翌4:00", "即時納品"],
+    "sec_h": "ファミリー席、メール、ミラー",
+    "sec_p": "ファミリー席と Gmail は注文後に自動発送。ミラーはオールインワン体験",
+    "c1_badge": "ファミリー",
+    "c1_name": "Gemini Ultra 20x", "c1_tier": "共有席",
+    "c1_desc": "ファミリーグループに参加して Gemini Ultra 20x を利用。Flow ポイントはランダム、保証 30 日。",
+    "c1_period": "/ 席",
+    "c1_feats": ["Ultra 20x 共有ファミリー席", "ランダムな Flow ポイント", "保証 30 日", "自動発送"],
+    "c3_badge": "メール",
+    "c3_name": "Google Gmail", "c3_tier": "米国の新規",
+    "c3_desc": "米国リージョンの新規個人 Gmail。ファミリー席への参加にも利用できます。",
+    "c3_period": "",
+    "c3_feats": ["米国の新規登録 Gmail", "個人受信箱", "自動発送", "在庫あり"],
     "c2_badge": "おすすめ",
     "c2_name": "ミラーサイト", "c2_tier": "VPN不要",
     "c2_desc": "GPT / Claude / Gemini / Grok などを統合。公式の IP・地域・決済制限を回避。",
@@ -123,14 +138,19 @@ GEMINI = {
     "hero": "Gemini 완제품 계정과 충전에 집중합니다. 주문 후 로그인 가능한 계정 또는 기존 계정 충전. Gemini 3, Gemini Pro 등 멀티모달 지원.",
     "buy": "바로 구매",
     "contact": "고객지원 문의",
-    "tags": ["Gemini 3 완제품 계정", "Gemini Pro 충전", "세금계산서 가능", "지원 9:00–익일 4:00", "즉시 지급"],
-    "sec_h": "공식 계정 & 미러  Dual 옵션",
-    "sec_p": "공식은 상담원이 개통, 미러는 올인원 경험 제공",
-    "c1_badge": "공식 계정",
-    "c1_name": "Gemini Pro", "c1_tier": "18개월",
-    "c1_desc": "Gemini Pro 교환 링크, Google One 5TB 포함, 약 18개월.",
-    "c1_period": "/ 18개월",
-    "c1_feats": ["Gemini Pro 교환 링크", "Google One 5TB 포함", "약 18개월 유효", "애프터 기술 지원"],
+    "tags": ["Ultra 20x 가족 좌석", "미국 신규 Gmail", "세금계산서 가능", "지원 9:00–익일 4:00", "즉시 지급"],
+    "sec_h": "가족 좌석, 메일, 미러",
+    "sec_p": "가족 그룹 좌석과 Gmail은 주문 후 자동 발송, 미러는 올인원 경험 제공",
+    "c1_badge": "가족 그룹",
+    "c1_name": "Gemini Ultra 20x", "c1_tier": "공유 좌석",
+    "c1_desc": "가족 그룹에 참여해 Gemini Ultra 20x를 사용합니다. Flow 크레딧은 랜덤, 보증 30일.",
+    "c1_period": "/ 좌석",
+    "c1_feats": ["Ultra 20x 공유 가족 그룹 좌석", "랜덤 Flow 크레딧", "보증 30일", "자동 발송"],
+    "c3_badge": "메일",
+    "c3_name": "Google Gmail", "c3_tier": "미국 신규",
+    "c3_desc": "미국 리전 신규 개인 Gmail. 가족 그룹 참여에도 사용할 수 있습니다.",
+    "c3_period": "",
+    "c3_feats": ["미국 신규 등록 Gmail", "개인 메일함", "자동 발송", "재고 있음"],
     "c2_badge": "추천",
     "c2_name": "미러 사이트", "c2_tier": "VPN 불필요",
     "c2_desc": "GPT, Claude, Gemini, Grok 등을 통합. 공식 IP/지역/결제 제한 없음.",
@@ -159,14 +179,19 @@ GEMINI = {
     "hero": "Nos enfocamos en cuentas Gemini listas y recargas. Tras el pedido obtienes una cuenta lista o recargamos la tuya: Gemini 3, Gemini Pro y más.",
     "buy": "Comprar ahora",
     "contact": "Contactar soporte",
-    "tags": ["Cuentas Gemini 3 listas", "Recarga Gemini Pro", "Factura disponible", "Soporte 9:00–04:00", "Entrega casi inmediata"],
-    "sec_h": "Cuenta oficial y opción espejo",
-    "sec_p": "Las oficiales las abre soporte; el espejo ofrece experiencia todo-en-uno",
-    "c1_badge": "Cuenta oficial",
-    "c1_name": "Gemini Pro", "c1_tier": "18 meses",
-    "c1_desc": "Enlace de canje Gemini Pro con Google One 5TB, unos 18 meses.",
-    "c1_period": "/ 18 meses",
-    "c1_feats": ["Enlace de canje Gemini Pro", "Incluye Google One 5TB", "Validez ~18 meses", "Soporte técnico postventa"],
+    "tags": ["Plaza familiar Ultra 20x", "Gmail US nuevo", "Factura disponible", "Soporte 9:00–04:00", "Entrega casi inmediata"],
+    "sec_h": "Plaza familiar, Gmail y espejo",
+    "sec_p": "Las plazas de grupo familiar y Gmail se envían automáticamente; el espejo ofrece experiencia todo-en-uno",
+    "c1_badge": "Grupo familiar",
+    "c1_name": "Gemini Ultra 20x", "c1_tier": "Plaza compartida",
+    "c1_desc": "Únete a un grupo familiar para Gemini Ultra 20x, con créditos Flow aleatorios y garantía de 30 días.",
+    "c1_period": "/ plaza",
+    "c1_feats": ["Plaza compartida Ultra 20x", "Créditos Flow aleatorios", "Garantía de 30 días", "Envío automático"],
+    "c3_badge": "Correo",
+    "c3_name": "Google Gmail", "c3_tier": "Nueva cuenta US",
+    "c3_desc": "Gmail personal de EE. UU. recién registrado, útil para unirse a un grupo familiar.",
+    "c3_period": "",
+    "c3_feats": ["Gmail US de registro nuevo", "Bandeja personal", "Envío automático", "En stock"],
     "c2_badge": "Popular",
     "c2_name": "Sitio espejo", "c2_tier": "Sin VPN",
     "c2_desc": "Integra GPT, Claude, Gemini, Grok… sin límites de IP/región/pago oficiales.",
@@ -195,14 +220,19 @@ GEMINI = {
     "hero": "Фокус на готовых аккаунтах Gemini и пополнении. После заказа — аккаунт для входа или пополнение вашего: Gemini 3, Gemini Pro и др.",
     "buy": "Купить сейчас",
     "contact": "Связаться с поддержкой",
-    "tags": ["Готовые аккаунты Gemini 3", "Пополнение Gemini Pro", "Счёт-фактура", "Поддержка 9:00–04:00", "Почти мгновенно"],
-    "sec_h": "Официальный аккаунт и зеркало",
-    "sec_p": "Официальные открывает поддержка; зеркало — всё в одном",
-    "c1_badge": "Официальный аккаунт",
-    "c1_name": "Gemini Pro", "c1_tier": "18 месяцев",
-    "c1_desc": "Ссылка обмена Gemini Pro с Google One 5TB, около 18 месяцев.",
-    "c1_period": "/ 18 мес",
-    "c1_feats": ["Ссылка обмена Gemini Pro", "Включает Google One 5TB", "~18 месяцев", "Техподдержка"],
+    "tags": ["Место Ultra 20x в семье", "Новый Gmail США", "Счёт-фактура", "Поддержка 9:00–04:00", "Почти мгновенно"],
+    "sec_h": "Семейное место, Gmail и зеркало",
+    "sec_p": "Места в семейной группе и Gmail выдаются автоматически; зеркало — всё в одном",
+    "c1_badge": "Семейная группа",
+    "c1_name": "Gemini Ultra 20x", "c1_tier": "Общее место",
+    "c1_desc": "Вступите в семейную группу для Gemini Ultra 20x: случайные кредиты Flow и гарантия 30 дней.",
+    "c1_period": "/ место",
+    "c1_feats": ["Общее место Ultra 20x", "Случайные кредиты Flow", "Гарантия 30 дней", "Автовыдача"],
+    "c3_badge": "Почта",
+    "c3_name": "Google Gmail", "c3_tier": "Новый аккаунт США",
+    "c3_desc": "Новый личный Gmail региона США — удобно для вступления в семейную группу.",
+    "c3_period": "",
+    "c3_feats": ["Новый Gmail региона США", "Личный ящик", "Автовыдача", "В наличии"],
     "c2_badge": "Хит",
     "c2_name": "Зеркало", "c2_tier": "Без VPN",
     "c2_desc": "GPT, Claude, Gemini, Grok… без лимитов IP/региона/оплаты сайта.",
@@ -231,6 +261,7 @@ def build_gemini(code: str) -> str:
     _, _, html_lang, _ = locale_by_code(code)
     tags = "\n".join(f'                <span class="tag">{x}</span>' for x in g["tags"])
     f1 = "\n".join(f"                        <li>{x}</li>" for x in g["c1_feats"])
+    f3 = "\n".join(f"                        <li>{x}</li>" for x in g["c3_feats"])
     f2 = "\n".join(f"                        <li>{x}</li>" for x in g["c2_feats"])
     why = "\n".join(
         f"""                <div class="why-us-card">
@@ -240,9 +271,12 @@ def build_gemini(code: str) -> str:
                 </div>"""
         for icon, h, p in g["why"]
     )
+    buy_ultra = "https://wzyp.cn/item/56oh5g"
+    buy_gmail = "https://wzyp.cn/item/uedzy4"
+    buy_mirror = "https://new.geminiai.asia/list/#/login"
     return f"""{head_common(g['title'], g['desc'], html_lang, 'gemini/')}
 <body>
-{nav_html(code, 'gemini/', t, 'gemini', 'https://wzyp.cn/item/yuvhhb', g['cta'])}
+{nav_html(code, 'gemini/', t, 'gemini', buy_ultra, g['cta'])}
 
     <div class="container">
         <section class="hero">
@@ -250,7 +284,7 @@ def build_gemini(code: str) -> str:
             <h1 class="hero-title"><img class="hero-brand-mark" src="{ICON['gemini']}" width="40" height="40" alt="" aria-hidden="true"> {g['h1']}</h1>
             <p class="hero-desc">{g['hero']}</p>
             <div class="hero-actions">
-                <a href="https://wzyp.cn/item/yuvhhb" target="_blank" class="btn-primary">{g['buy']}</a>
+                <a href="{buy_ultra}" target="_blank" rel="noopener noreferrer" class="btn-primary">{g['buy']}</a>
                 <a href="#contact" class="btn-secondary">{g['contact']}</a>
             </div>
             <div class="hero-tags">
@@ -273,13 +307,30 @@ def build_gemini(code: str) -> str:
                     <p class="pricing-desc">{g['c1_desc']}</p>
                     <div class="pricing-price">
                         <span class="price-currency">&yen;</span>
-                        <span class="price-amount">49</span>
+                        <span class="price-amount">208</span>
                         <span class="price-period">{g['c1_period']}</span>
                     </div>
                     <ul class="pricing-features">
 {f1}
                     </ul>
-                    <a href="https://wzyp.cn/item/yuvhhb" target="_blank" class="btn-primary btn-block">{g['buy']}</a>
+                    <a href="{buy_ultra}" target="_blank" rel="noopener noreferrer" class="btn-primary btn-block">{g['buy']}</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-badge">{g['c3_badge']}</div>
+                    <div class="pricing-title-row">
+                        <img class="product-mark" src="{ICON['gemini']}" width="28" height="28" alt="" aria-hidden="true">
+                        <h3><span class="product-name">{g['c3_name']}</span> <span class="product-tier">{g['c3_tier']}</span></h3>
+                    </div>
+                    <p class="pricing-desc">{g['c3_desc']}</p>
+                    <div class="pricing-price">
+                        <span class="price-currency">&yen;</span>
+                        <span class="price-amount">10.2</span>
+                        <span class="price-period">{g['c3_period']}</span>
+                    </div>
+                    <ul class="pricing-features">
+{f3}
+                    </ul>
+                    <a href="{buy_gmail}" target="_blank" rel="noopener noreferrer" class="btn-primary btn-block">{g['buy']}</a>
                 </div>
                 <div class="pricing-card featured">
                     <div class="pricing-badge hot">{g['c2_badge']}</div>
@@ -296,7 +347,7 @@ def build_gemini(code: str) -> str:
                     <ul class="pricing-features">
 {f2}
                     </ul>
-                    <a href="https://new.geminiai.asia/list/#/login" target="_blank" rel="noopener noreferrer" class="btn-primary btn-block">{g['c2_btn']}</a>
+                    <a href="{buy_mirror}" target="_blank" rel="noopener noreferrer" class="btn-primary btn-block">{g['c2_btn']}</a>
                 </div>
             </div>
             <div class="pricing-note"><p>{g['note']}</p></div>
@@ -334,7 +385,6 @@ def build_gemini(code: str) -> str:
 </body>
 </html>
 """
-# fix typo price-period -> price-period in output via replace after
 
 # ---- GROK ----
 GROK = {
