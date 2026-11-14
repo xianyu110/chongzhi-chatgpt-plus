@@ -273,7 +273,7 @@ def build_gemini(code: str) -> str:
     )
     buy_ultra = "https://wzyp.cn/item/56oh5g"
     buy_gmail = "https://wzyp.cn/item/uedzy4"
-    buy_mirror = "https://new.geminiai.asia/list/#/login"
+    buy_mirror = "https://new.gemini-ultra.top/list/#/login"
     return f"""{head_common(g['title'], g['desc'], html_lang, 'gemini/')}
 <body>
 {nav_html(code, 'gemini/', t, 'gemini', buy_ultra, g['cta'])}
